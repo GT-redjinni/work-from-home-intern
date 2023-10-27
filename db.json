@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "firstName": "Dev",
+      "lastName": "Yadav",
+      "email": "dev@hotmail.com",
+      "password": "dev@123",
+      "gender": "on",
+      "dob": "2000-02-10",
+      "id": 1
+    },
+    {
+      "firstName": "Harshit",
+      "lastName": "yadav",
+      "email": "harshi@gmail.com",
+      "password": "harshit@123",
+      "gender": "on",
+      "dob": "5200-02-10",
+      "id": 2
+    }
+  ]
+}
