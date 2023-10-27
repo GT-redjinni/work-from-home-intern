@@ -19,7 +19,7 @@
               class="outline-none border-b-2 focus:border-b-red-500 bg-gray-200 rounded-sm p-1">
           </div>
           <div class="text-right my-1 sm:my-[4px] text-sm">
-            <a href="#">Forgot Password?</a>
+            <router-link to="/forgot">Forgot Password?</router-link>
           </div>
           <button type="submit"
             class="bg-[#c10111] p-1 w-full rounded-sm text-center text-white my-2 sm:mt-5 cursor-pointer hover:bg-red-800">Sign
