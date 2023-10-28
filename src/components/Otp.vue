@@ -1,5 +1,5 @@
 <template>
-    <div class="h-[340px] w-80 flex justify-center px-10 rounded-md py-14 shadow-md bg-white absolute top-36 right-40">
+    <div class="h-[340px] w-80 flex justify-center px-10 rounded-md py-14 shadow-md bg-white absolute top-36 right-7 sm:right-40">
         <form @submit.prevent="otp()">
             <h4 class="text-center text-xl font-semibold text-red-600">OTP Verification</h4>
             <p class="text-center">Enter One-Time-Password send to Email</p>

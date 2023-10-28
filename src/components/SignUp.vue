@@ -1,12 +1,12 @@
 <template>
     <div class="h-full">
         <div
-            class="absolute h-64 top-40 right-12 w-64 py-40 sm:top-[40px] sm:right-[150px] sm:h-[580px] sm:w-[450px] bg-white shadow-lg rounded-lg flex flex-col justify-center items-center">
+            class="absolute h-64 top-32 right-12 w-60 py-40 sm:top-[40px] sm:right-[150px] sm:h-[580px] sm:w-[450px] bg-white shadow-lg rounded-lg flex flex-col justify-center items-center">
             <div class="text-[#c10111] text-lg sm:text-2xl font-bold">Create an Account</div>
             <div class="sm:mt-2 sm:w-full sm:px-14">
 
                 <form @submit.prevent="singUp()">
-                    <div class="sm:mt-2 flex justify-between">
+                    <div class="sm:mt-2 flex justify-between flex-col sm:flex-row">
                         <div class="sm:w-[45%]">
                             <label for="firstName">First Name</label>
                             <input type="text" id="firstName" required v-model="firstName"
