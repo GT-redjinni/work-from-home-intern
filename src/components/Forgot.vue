@@ -34,7 +34,7 @@ export default {
             this.result= await this.ueserData()
             if (this.result.status === 200 && this.result.data.length>0) {
                 localStorage.setItem('user-info',JSON.stringify(this.result.data[0]))
-                console.log(this.result.data[0])
+                console.log('Forgot Component')
                 this.$router.push({ name: 'Otp' })
                 
             }else{

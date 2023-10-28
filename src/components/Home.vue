@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             userData: null,
-            isVisible: true,
+            isVisible: this.$route.params.msg,
         };
     },
     created() {
@@ -37,15 +37,14 @@ export default {
         getData() {
             let userInfo = localStorage.getItem('user-info');
             if (!userInfo) {
-                console.log(userInfo);
                 this.$router.push({ name: 'SignIn' });
             }
             this.userData = JSON.parse(userInfo);
 
         },
         closeModal() {
-            
             this.isVisible = false;
+            
         },
     },
 };

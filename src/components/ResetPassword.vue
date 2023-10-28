@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         handleSubmit() {
-            this.$router.push({name:'Home'})
+            this.$router.push({name:'Home',params:{msg:'reset'}})
         }
     }
 }

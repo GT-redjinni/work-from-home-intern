@@ -6,14 +6,15 @@ import  SignUp from './components/SignUp.vue'
 import  Forgot from './components/Forgot.vue'
 import  Otp from './components/Otp.vue'
 import  ResetPassword from './components/ResetPassword.vue'
+import  ErrorPage from './components/ErrorPage.vue'
 
 const routes=[
     {
         name:'Home',
-        path:'/',
+        path:'/:msg?',
         component:Home
     },
-    {
+    {   
         name:'SignIn',
         path:'/signin',
         component:SignIn
@@ -37,6 +38,11 @@ const routes=[
         name:'ResetPassword',
         path:'/reset',
         component:ResetPassword
+    },
+    {
+        name:'ErrorPage',
+        path: '/:catchAll(.*)*',
+        component:ErrorPage
     }
 ];
 
