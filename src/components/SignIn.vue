@@ -1,32 +1,27 @@
 <template>
   <div class="h-full">
     <div
-      class="absolute h-64 top-40 right-12 w-64 py-44 sm:top-[86px] sm:py-64 sm:right-[150px] sm:h-[470px] sm:w-96 bg-white shadow-lg rounded-lg flex flex-col justify-center items-center">
-      <div class="text-[#c10111] text-lg sm:text-2xl font-bold">Welcome to Garba Jockey</div>
+      class="absolute bg-white shadow-lg rounded-lg flex flex-col justify-center items-center h-64 sm:h-[470px] md:h-[650px] lg:h-36 w-64 sm:w-96 md:w-[450px] lg:w-96 top-40 sm:top-[86px] md:top-52 lg:top-10 right-12 sm:right-[150px] md:right-24 lg:right-32 py-44 sm:py-64">
+      <div class="text-red-600 text-lg sm:text-2xl font-bold">Welcome to Garba Jockey</div>
       <div class="sm:mt-5 sm:w-full sm:px-14">
 
         <form @submit.prevent="login()">
           <p class="sm:text-xl">Sign In</p>
           <div class="sm:mt-5 flex flex-col">
             <label for="email">Email</label>
-            <input type="email" id="email" required v-model="email"
-              class="outline-none border-b-2 focus:border-b-red-500 bg-gray-200 rounded-sm p-1">
+            <input type="email" id="email" required v-model="email">
           </div>
 
           <div class="flex flex-col sm:mt-5">
             <label for="password">Password</label>
-            <input type="password" id="password" required v-model="password"
-              class="outline-none border-b-2 focus:border-b-red-500 bg-gray-200 rounded-sm p-1">
+            <input type="password" id="password" required v-model="password">
           </div>
           <div class="text-right my-1 sm:my-[4px] text-sm">
             <router-link to="/forgot">Forgot Password?</router-link>
           </div>
-          <button type="submit"
-            class="bg-[#c10111] p-1 w-full rounded-sm text-center text-white my-2 sm:mt-5 cursor-pointer hover:bg-red-800">Sign
-            In
-          </button>
+          <input type="submit" class="text-center my-2 sm:mt-5" value="Sign In"/>
           <div class="text-center sm:my-5">
-            <p>New Here? <router-link to="/signUp" class="text-[#c10111]">Create an Account</router-link></p>
+            <p>New Here? <router-link to="/signUp" class="text-red-600">Create an Account</router-link></p>
           </div>
           <div class="flex justify-center items-center">
             <hr class="sm:w-[115px]" />
