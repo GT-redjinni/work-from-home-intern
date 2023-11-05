@@ -1,17 +1,20 @@
 <template>
-    <div class="relative flex justify-around p-5 text-xl">
-        <div class="shadow-sm p-3 bg-red-600 rounded-md text-white">Home</div>
+    <div class="self-start flex flex-col h-screen w-screen items-center">
+        <div class="relative p-5 w-screen flex justify-around text-xl">
+            <div class="shadow-sm p-3 bg-red-600 rounded-md text-white">Home</div>
 
-        <router-link @click="logout()" to="/signin"
-            class="shadow-sm p-3 bg-red-600 rounded-md text-white cursor-pointer">Logout</router-link>
+            <router-link @click="logout()" to="/signin"
+                class="shadow-sm p-3 bg-red-600 rounded-md text-white cursor-pointer">Logout</router-link>
 
-    </div>
-    <div v-if="isVisible" class="relative flex justify-center mt-28">
-        <div class="bg-white p-8 rounded shadow-md flex flex-col justify-center items-center">
-            <div class="text-4xl text-center pt-3 font-bold mb-4 rounded-full w-16 h-16 bg-red-600 text-white">&#10003;
+        </div>
+
+        <div v-if="isVisible" class="relative w-fit mt-[50vw] sm:mt-[40vw] md:mt-[30vw] lg:mt-[20vw] xl:mt-[10vw]">
+            <div class="bg-white p-8 rounded shadow-md flex flex-col justify-center items-center">
+                <div class="text-4xl text-center pt-3 font-bold mb-4 rounded-full w-16 h-16 bg-red-600 text-white">&#10003;
+                </div>
+                <p class="w-60 text-center">Your Password Has Been Reset Successfully</p>
+                <button @click="closeModal" class="mt-4 bg-red-600 text-white px-4 py-2 rounded">Dashboard</button>
             </div>
-            <p class="w-60 text-center">Your Password Has Been Reset Successfully</p>
-            <button @click="closeModal" class="mt-4 bg-red-600 text-white px-4 py-2 rounded">Dashboard</button>
         </div>
     </div>
 </template>
@@ -44,7 +47,7 @@ export default {
         },
         closeModal() {
             this.isVisible = false;
-            
+
         },
     },
 };

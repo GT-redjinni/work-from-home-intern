@@ -1,48 +1,47 @@
 <template>
-  <div class="h-full">
-    <div
-      class="absolute bg-white shadow-lg rounded-lg flex flex-col justify-center items-center h-64 sm:h-[470px] md:h-[650px] lg:h-36 w-64 sm:w-96 md:w-[450px] lg:w-96 top-40 sm:top-[86px] md:top-52 lg:top-10 right-12 sm:right-[150px] md:right-24 lg:right-32 py-44 sm:py-64">
-      <div class="text-red-600 text-lg sm:text-2xl font-bold">Welcome to Garba Jockey</div>
-      <div class="sm:mt-5 sm:w-full sm:px-14">
+  <div class="shadow-lg bg-white max-w-[500px] lg:min-h-[4vw] fixed bg-orane-300 p-[4vw] md:right-[10vw]">
+    <div class="">
+      <div class="text-red-600 font-semibold text-center text-[5vw] sm:text-[5vw] md:text-[2vw]">Welcome to
+        Garba Jockey</div>
+      <form @submit.prevent="login()">
+        <p class="">Sign In</p>
+        <div class="flex flex-col">
+          <label for="email" class="">Email</label>
+          <input type="email" id="email" required v-model="email" class="bg-gray-200 min-h-[8vw] sm:min-h-[5vw] md:min-h-[4vw] lg:min-h-[2.5vw]">
+        </div>
 
-        <form @submit.prevent="login()">
-          <p class="sm:text-xl">Sign In</p>
-          <div class="sm:mt-5 flex flex-col">
-            <label for="email">Email</label>
-            <input type="email" id="email" required v-model="email">
-          </div>
+        <div class="flex flex-col">
+          <label for="password" class="">Password</label>
+          <input type="password" id="password" required v-model="password" class="bg-gray-200 min-h-[8vw]  sm:min-h-[4vw] md:min-h-[4vw] lg:min-h-[2.5vw]">
+        </div>
+        <div class="text-end my-[0.5vh]">
+          <router-link to="/forgot" class="">Forgot
+            Password?</router-link>
+        </div>
 
-          <div class="flex flex-col sm:mt-5">
-            <label for="password">Password</label>
-            <input type="password" id="password" required v-model="password">
-          </div>
-          <div class="text-right my-1 sm:my-[4px] text-sm">
-            <router-link to="/forgot">Forgot Password?</router-link>
-          </div>
-          <input type="submit" class="text-center my-2 sm:mt-5" value="Sign In"/>
-          <div class="text-center sm:my-5">
-            <p>New Here? <router-link to="/signUp" class="text-red-600">Create an Account</router-link></p>
-          </div>
-          <div class="flex justify-center items-center">
-            <hr class="sm:w-[115px]" />
-            <p class="sm:mx-4">OR</p>
-            <hr class="sm:w-[115px]" />
-          </div>
-          <div class="flex justify-between mb-2 sm:my-5">
-            <div
-              class="shadow-md cursor-pointer hover:bg-gray-200  flex justify-center sm:w-28 gap-1 p-1 text-sm font-semibold items-center">
-              <img class="h-5 sm:h-5" src="../assets/google.svg" alt="google" />Google
-            </div>
-            <div
-              class="shadow-md cursor-pointer hover:bg-gray-200 flex justify-center sm:w-28 gap-1 p-1 text-sm font-semibold items-center">
-              <img class="h-5 sm:h-5" src="../assets/facebook_icon.svg.png" alt="facebook" />Facebook
-            </div>
-          </div>
+        <!-- ! signIn button -->
+        <input type="submit" value="Sign In" class="rounded-sm w-full bg-red-600 hover:bg-red-700 text-white min-h-[8vw]  sm:min-h-[4vw] md:min-h-[4vw] lg:min-h-[2.5vw]"/>
 
-        </form>
-      </div>
+
+        <div class="text-center my-[0.5vh]">
+          <p>New Here? <router-link to="/signUp" class="text-red-600">Create an Account</router-link></p>
+        </div>
+        <div class="flex justify-center items-center">
+          <hr class="w-[49%] border-gray-400" />
+          <p class="mx-[1vw]  text-[5vw] sm:text-[1.5vw]">OR</p>
+          <hr class="w-[49%] border-gray-400" />
+        </div>
+
+        <div class="flex flex-col items-center justify-center sm:gap-10 sm:mt-[0.5vh] sm:flex-row">
+          <p class="flex justify-center gap-x-1 text-[2vw] sm:text-[1.5vw] min:w-[8vw] max:w-[10vw] items-center py-[5px] px-[10px] shadow-md">
+            <img src="../assets/google.svg" alt="google" class="w-[2.5vw]">Google
+          </p>
+          <p class="flex justify-center gap-x-1 text-[2vw] sm:text-[1.5vw] min:w-[8vw] max:w-[10vw] items-center shadow-md py-[5px] px-[10px]">
+            <img src="../assets/facebook_icon.svg.png" alt="facebook" class="w-[2.5vw]">Facebook
+          </p>
+        </div>
+      </form>
     </div>
-
   </div>
 </template>
 
@@ -58,8 +57,8 @@ export default {
   },
   methods: {
     async login() {
-      let result = await axios.get(`http://localhost:3001/users/?email=${this.email}&password=${this.password}`)
-
+      let result = await axios.get(`http://localhost:3000/users/?email=${this.email}&password=${this.password}`)
+      console.log('working')
       if (result.status === 200 && result.data.length > 0) {
         localStorage.setItem('user-info', JSON.stringify(result.data[0]))
         this.$router.push({ name: 'Home' })
