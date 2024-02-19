@@ -1,0 +1,33 @@
+.text-heading{
+    font-size: 1.5rem;
+}
+.text-subheading{
+    font-size: 1.1rem;
+}
+.text-desc{
+    font-size: 0.9rem;
+}
+.red-color{
+    color: #F20000;
+}
+.grey-color{
+    color: #585858
+}
+.font-400{
+    font-weight: 400
+}
+.font-600{
+    font-weight: 600
+}
+.confirm-btn{
+    background: #EB0E19 ;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+.decline-btn{
+    background: #E8E8E8;
+    color: #9A9A9A;
+    border-radius: 8px;
+    transition: 0.3s ease-out;
+}

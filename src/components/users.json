@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "name": "User 1",
+      "email": "user1@test.com",
+      "password": "user@1",
+      "profile_img":"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"Berlin",
+      "followers": [4,6],
+      "following": [3,5,7],
+      "friendRequests": [2,8]
+    },
+    {
+      "id": 2,
+      "name": "User 2",
+      "email": "user2@test.com",
+      "password": "user@2",
+      "profile_img":"https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"USA",
+      "followers": [1,5,7],
+      "following": [4,6],
+      "friendRequests": [3,8]
+    },
+    {
+      "id": 3,
+      "name": "User 3",
+      "email": "user3@test.com",
+      "password": "user@3",
+      "profile_img":"https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"Canada",
+      "followers": [5,7],
+      "following": [2,4,6],
+      "friendRequests": [1,8]
+    },
+    {
+      "id": 4,
+      "name": "User 4",
+      "email": "user3@test.com",
+      "password": "user@3",
+      "profile_img":"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"Australia"
+    },
+    {
+      "id": 5,
+      "name": "User 5",
+      "email": "user3@test.com",
+      "password": "user@3",
+      "profile_img":"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"UK"
+    },
+    {
+      "id": 6,
+      "name": "User 6",
+      "profile_img":"https://images.unsplash.com/photo-1488371934083-edb7857977df?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"Mexico"
+    },
+    {
+      "id": 7,
+      "name": "User 7",
+      "profile_img":"https://images.unsplash.com/photo-1488371934083-edb7857977df?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"Japan"
+    },
+    {
+      "id": 8,
+      "name": "User 8",
+      "profile_img":"https://images.unsplash.com/photo-1488371934083-edb7857977df?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location":"New Zealand"
+    }
+  ]

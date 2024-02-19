@@ -1,0 +1,24 @@
+<template>
+    <div class="card">
+                        <div class="card-body">
+                        <div class="heading ms-3">About Us</div>
+                        <div class="body text-center border-top mt-3">
+                            <img src="../../assets/about-logo.jpg" alt="" height="150px" width="150px">
+                            <br>
+                            <p style="padding: 20px 40px 10px 40px;text-align: start;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa justo, sodales eu elit nec, consequat convallis mi. In consectetur eget est ac cursus. Nullam eget suscipit purus. Nullam eros elit, luctus at dictum non, posuere ut nulla. Aliquam volutpat sem ligula, id rhoncus nisl consectetur ac. Aenean pellentesque consectetur condimentum. Phasellus malesuada luctus libero, sit amet iaculis arcu. Donec eu ante dapibus, euismod ligula et, facilisis dolor. Duis dapibus mi sed magna molestie volutpat. Quisque rutrum condimentum lorem eget gravida. Sed ac fringilla sapien. Suspendisse eleifend mi elementum leo feugiat feugiat.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+</template>
+
+<script>
+    export default {
+        name:'AboutUs'
+    }
+</script>
+
+<style scoped>
+
+</style>
