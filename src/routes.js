@@ -4,8 +4,8 @@ import DineinComponent from './components/Dine-in/DineinComponent.vue';
 import NotificationComponent from './components/Notification/NotificationComponent.vue';
 import SettingComponent from './components/Setting/SettingComponent.vue';
 import MeComponent from './components/Me/MeComponent.vue';
-import EditProfile from './components/EditProfile.vue';
-import SinglePost from './components/SinglePost.vue';
+import EditProfile from './components/Me/EditProfile/EditProfile.vue';
+import SinglePost from './components/Foodfie/SinglePost.vue';
 import LogIn from './components/LogIn.vue'; 
 
 const routes= [

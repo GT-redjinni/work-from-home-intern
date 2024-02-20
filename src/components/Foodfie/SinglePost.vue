@@ -6,10 +6,10 @@
     <div class="card border mt-3">
     <div class="card-body">
     <form class="w-100">
-    <img src="../assets/user-image.jpg" height="40px" width="40px" class="float-start img-posts" />
+    <img src="../../assets/user-image.jpg" height="40px" width="40px" class="float-start img-posts" />
     <div class="float-start mx-2">
         <h5 class="text-subheading mb-0">Rajkumar Gupta</h5>
-        <p class="text-desc mt-0"> <img src="../assets/time-icon.png" height="15px" width="15px"> 30 Min | <img src="../assets/location-icon.png" height="15px" width="15px"> Surat City</p>
+        <p class="text-desc mt-0"> <img src="../../assets/time-icon.png" height="15px" width="15px"> 30 Min | <img src="../../assets/location-icon.png" height="15px" width="15px"> Surat City</p>
     </div>
     <div class="ms-auto dropdown">
             <button class="btn dropdown-toggle dropdown-toggle-split" type="button" id="dropdownMenuButton"
@@ -26,12 +26,12 @@
 
   </form>
   <p class="text-start">On the other hand,we denouncewith righteous indignation and dislike me be beguilded and demoralized</p>
-  <img src="../assets/post1.png" class="img-fluid">
+  <img src="../../assets/post1.png" class="img-fluid">
   <div class="btn-group mt-3 action-buttons row">
   <div class="col-6 col-md-3">
     <button type="button" class="btn mx-4" v-on:click="toggleLikes">
       <div class="icon-count-container">
-        <img src="../assets/like-icon.svg" class="lcsv" />
+        <img src="../../assets/like-icon.svg" class="lcsv" />
         <span class="count">125 likes</span>
       </div>
     </button>
@@ -39,7 +39,7 @@
   <div class="col-6 col-md-3">
     <button type="button" class="btn mx-4" v-on:click="toggleComments">
       <div class="icon-count-container">
-        <img src="../assets/comment-icon.svg" class="lcsv" />
+        <img src="../../assets/comment-icon.svg" class="lcsv" />
         <span class="count">125 comments</span>
       </div>
     </button>
@@ -47,14 +47,14 @@
   <div class="col-6 col-md-3">
     <button type="button" class="btn mx-4" v-on:click="toggleShare">
       <div class="icon-count-container">
-        <img src="../assets/share-icon.svg" class="lcsv" />
+        <img src="../../assets/share-icon.svg" class="lcsv" />
         <span class="count">15 share</span>
       </div>
     </button>
   </div>
   <div class="mt-3 text-start">
     <form class="w-100 text-start mt-3">
-        <img src="../assets/user1.jpg" class="img-search rounded-circle" height="50px" width="50px" />
+        <img src="../../assets/user1.jpg" class="img-search rounded-circle" height="50px" width="50px" />
         <div class="float-start comments w-100">
         <h5 class="text-subheading font-600 mt-0" style="color: #535353;">Sonal Rahane</h5>
         <p class="text-desc mt-0 grey-color font-400">Digital Marketing | Social Media
@@ -63,7 +63,7 @@
     </div>
     </form>  
     <form class="w-100 text-start mt-3">
-        <img src="../assets/user2.jpg" class="img-search rounded-circle" height="50px" width="50px" />
+        <img src="../../assets/user2.jpg" class="img-search rounded-circle" height="50px" width="50px" />
         <div class="float-start comments w-100">
         <h5 class="text-subheading mb-0 pt-0 font-600" style="color: #535353;">Sonal Rahane</h5>
         <p class="text-desc grey-color font-400 mt-0pt-0">Digital Marketing | Social Media
@@ -72,7 +72,7 @@
     </div>
     </form>  
     <form class="w-100 text-start mt-3">
-        <img src="../assets/user3.jpg" class="img-search rounded-circle" height="50px" width="50px" />
+        <img src="../../assets/user3.jpg" class="img-search rounded-circle" height="50px" width="50px" />
         <div class="float-start comments w-100">
         <h5 class="text-subheading mb-0 pt-0 font-600" style="color: #535353;">Sonal Rahane</h5>
         <p class="text-desc grey-color font-400 mt-0pt-0">Digital Marketing | Social Media
@@ -81,7 +81,7 @@
     </div>
     </form>  
     <form class="w-100 text-start mt-3">
-        <img src="../assets/user4.jpg" class="img-search rounded-circle" height="50px" width="50px" />
+        <img src="../../assets/user4.jpg" class="img-search rounded-circle" height="50px" width="50px" />
         <div class="float-start comments w-100">
         <h5 class="text-subheading mb-0 pt-0 font-600" style="color: #535353;">Sonal Rahane</h5>
         <p class="text-desc grey-color font-400 mt-0pt-0">Digital Marketing | Social Media
@@ -101,26 +101,26 @@
   <div v-if="showComments" class="mt-3 text-start">
     <p><b>Sonu Sahani</b> There are many variations of passages of lorem ipsum available but the majority have suffered alteration in some form </p>
     <form class="w-100 text-start">
-        <img src="../assets/rajkumar.jpg" class="img-search rounded-circle" />
+        <img src="../../assets/rajkumar.jpg" class="img-search rounded-circle" />
         <input type="text" placeholder="Add a comment" class="comment-box">
     </form>    
 
   <form class="w-100 text-start mt-3">
-        <img src="../assets/user-image.jpg" class="img-search rounded-circle" />
+        <img src="../../assets/user-image.jpg" class="img-search rounded-circle" />
         <div class="float-start comments w-100">
         <h5 class="text-subheading mb-0">Sonal Rahane</h5>
         <p class="text-desc mt-0"> It was popularised in 1960s with the release of letraset</p>
     </div>
     </form> 
   <form class="w-100 text-start mt-3">
-        <img src="../assets/user-image.jpg" class="img-search rounded-circle" />
+        <img src="../../assets/user-image.jpg" class="img-search rounded-circle" />
         <div class="float-start comments w-100">
         <h5 class="text-subheading mb-0">Monali Rajpurohit</h5>
         <p class="text-desc mt-0"> nice post!</p>
     </div>
     </form> 
   <form class="w-100 text-start mt-3">
-        <img src="../assets/user-image.jpg" class="img-search rounded-circle" />
+        <img src="../../assets/user-image.jpg" class="img-search rounded-circle" />
         <div class="float-start comments w-100">
         <h5 class="text-subheading mb-0">raj kahate</h5>
         <p class="text-desc mt-0"> good morning</p>
@@ -130,19 +130,19 @@
   </div>
   <div v-if="showShare" class="share-buttons mt-3 mx-4">
   <button class="share-button linkedin">
-    <img src="../assets/linkedin-icon.png" class="share-icon" alt="LinkedIn" />
+    <img src="../../assets/linkedin-icon.png" class="share-icon" alt="LinkedIn" />
   </button>
   <button class="share-button facebook">
-    <img src="../assets/facebook-icon.png" class="share-icon" alt="Facebook" />
+    <img src="../../assets/facebook-icon.png" class="share-icon" alt="Facebook" />
   </button>
   <button class="share-button instagram">
-    <img src="../assets/instagram-icon.png" class="share-icon" alt="Instagram" />
+    <img src="../../assets/instagram-icon.png" class="share-icon" alt="Instagram" />
   </button>
   <button class="share-button whatsapp">
-    <img src="../assets/whatsapp-icon.png" class="share-icon" alt="WhatsApp" />
+    <img src="../../assets/whatsapp-icon.png" class="share-icon" alt="WhatsApp" />
   </button>
   <button class="share-button youtube">
-    <img src="../assets/youtube-icon.png" class="share-icon" alt="YouTube" />
+    <img src="../../assets/youtube-icon.png" class="share-icon" alt="YouTube" />
   </button>
 </div>
 
