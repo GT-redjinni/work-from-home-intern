@@ -3,9 +3,9 @@
     
     <div class="row mb-3">
       <div v-for="(offer, index) in offersData" :key="index" class="col-lg-4 col-md-6 col-sm-12 mt-3">
-        <div class="card border rounded m-0 p-0" data-bs-toggle="modal" data-bs-target="#offersModal" @click="offerr(offer.Bname)">
+        <div class="card border rounded-3 m-0 p-0" data-bs-toggle="modal" data-bs-target="#offersModal" @click="offerr(offer.Bname)" style="box-shadow: 0px 3px 6px #00000029;">
           <div class="card-title text-center">
-            <img :src="offer.imgSrc" alt="" class="img-fluid rounded mx-auto" style="max-height: 250px; width: 100%;">
+            <img :src="offer.imgSrc" alt="" class="img-fluid rounded-3 mx-auto" style="max-height: 250px; width: 100%;object-fit: fill;">
           </div>
           <div class="card-body">
             <div class="d-flex justify-content-between m-2 mb-0 mt-0">
@@ -59,9 +59,6 @@
         </div>
 
     </div>
-
-
-    
 
 <!-- Book table modal -->
     <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true" >

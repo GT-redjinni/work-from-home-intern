@@ -1,16 +1,16 @@
 <template>
     <div class="container">
         <div class="row text-center">
-            <div class="col-12 col-md-3 mt-3"><img src="../../assets/dinein-burger.jpg" alt="" class="rounded-3" height="175px" width="250px"></div>
+            <div class="col-12 col-md-3 mt-3"><DineinBurger/></div>
             <div class="col-12 col-md-6 mt-3"><CreatePost/></div>
-            <div class="col-12 col-md-3 mt-3"><img src="../../assets/dinein-salad.jpg" alt="" class="rounded-3" height="175px" width="250px"></div>
+            <div class="col-12 col-md-3 mt-3"><DineinSalad/></div>
         </div>
     </div>
 
     <CategorySlider/>
 
 <div class="container">
-    <div class="heading text-start ms-3 mt-2" style="font-size: 32px;color: #585858;">
+    <div class="heading text-start ms-3 mt-2 mb-2" style="font-size: 32px;color: #585858;">
           Top Brands For You ----------------------------------------------------------------------------
     </div>
 </div>
@@ -27,6 +27,8 @@
 
 <script>
 import CategorySlider from '../Dine-in/CategorySlider.vue';
+import DineinBurger from './DineinBurger.vue';
+import DineinSalad from './DineinSalad.vue';
 import CreatePost from '../Foodfie/CreatePost.vue';
 import BrandCarousel from '../Dine-in/BrandsCarousel.vue';
 import OffersSection from '../Dine-in/OffersSection.vue';
@@ -34,6 +36,8 @@ import OffersSection from '../Dine-in/OffersSection.vue';
     name: 'DineinComponent',
     components: { 
         CategorySlider,
+        DineinBurger,
+        DineinSalad,
         CreatePost,
         BrandCarousel,
         OffersSection,
