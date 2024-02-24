@@ -60,7 +60,7 @@
                         <textarea name="address" id="address" cols="100" rows="4" style="border: 1px solid black;border-radius: 8px;"></textarea>
                     </div>
 
-                    <button class="btn frm-btn text-white w-100 text-center mt-1">Apply</button>
+                    <button class="btn frm-btn text-white w-100 text-center mt-1" style="background-color: #F20000;">Apply</button>
                 </form>
             </div>
 

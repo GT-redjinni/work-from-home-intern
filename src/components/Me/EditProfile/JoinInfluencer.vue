@@ -75,7 +75,7 @@
                     <div class="text-center">
                         <button @click="addPlatform" type="button" class="btn btn-primary text-white text-center">Add</button>
                     </div>
-                    <button class="btn frm-btn text-white w-100 text-center mt-3">Submit</button>
+                    <button class="btn frm-btn text-white w-100 text-center mt-3" style="background-color: #F20000;">Submit</button>
                 </form>
             </div>
 

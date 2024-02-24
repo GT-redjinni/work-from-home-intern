@@ -21,7 +21,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import {  Navigation } from 'swiper/modules';
 export default {
-  name: 'BrandCarousel',
+  name: 'AllCarousel',
   components: {
       Swiper,
       SwiperSlide,
@@ -29,12 +29,12 @@ export default {
   data(){
       return{
           brandsData:[
-              {id:1,name:'Vijay Dairy',img:require('../../assets/vijaydairy-logo.png')},
-              {id:2,name:'Goldy Cakes',img:require('../../assets/goldycakes-logo.png')},
-              {id:3,name:'Uncle Sammy',img:require('../../assets/unclesammy-logo.jpg')},
-              {id:4,name:'Gents Salon',img:require('../../assets/gentsalon-logo.jpg')},
-              {id:5,name:'Superdry',img:require('../../assets/superdry-logo.jpg')},
-              {id:6,name:'Jack & Jones',img:require('../../assets/j&j-logo.jpg')}
+              {id:1,name:'Vijay Dairy',img:require('../../../assets/vijaydairy-logo.png')},
+              {id:2,name:'Goldy Cakes',img:require('../../../assets/goldycakes-logo.png')},
+              {id:3,name:'Uncle Sammy',img:require('../../../assets/unclesammy-logo.jpg')},
+              {id:4,name:'Gents Salon',img:require('../../../assets/gentsalon-logo.jpg')},
+              {id:5,name:'Superdry',img:require('../../../assets/superdry-logo.jpg')},
+              {id:6,name:'Jack & Jones',img:require('../../../assets/j&j-logo.jpg')}
           ]
       }
   },

@@ -1,6 +1,15 @@
 <template>
+  <div class="container">
+    <div class="text-start ms-2 mb-3 heading" style="font-size: 2rem;color: #585858;" data-bs-toggle="modal" data-bs-target="#filterModal">
+      Offers Near You
+      <hr class="horizontal-line" />
+      Filter
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+      </svg>
+    </div>
+  </div>
     <div class="container bg-white">
-    
     <div class="row mb-3">
       <div v-for="(offer, index) in offersData" :key="index" class="col-lg-4 col-md-6 col-sm-12 mt-3">
         <div class="card border rounded-3 m-0 p-0" data-bs-toggle="modal" data-bs-target="#offersModal" @click="offerr(offer.Bname)" style="box-shadow: 0px 3px 6px #00000029;">
@@ -288,5 +297,21 @@ export default {
 .value{
     padding: 10px 20px;
     font-size: 16px;
+}
+.heading {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  position: relative;
+  column-gap: 1.5rem;
+}
+
+.horizontal-line {
+    content: "";
+    height: 2px;
+    background-color: black;
+    display: block;
+    position: relative;
+    width: 65%; 
 }
 </style>

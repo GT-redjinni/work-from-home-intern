@@ -65,7 +65,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <button class="btn frm-btn text-white w-100 text-center mt-1">Update</button>
+                                <button class="btn frm-btn text-white w-100 text-center mt-1" style="background-color: #F20000;">Update</button>
                             </form>
                         </div>
 
