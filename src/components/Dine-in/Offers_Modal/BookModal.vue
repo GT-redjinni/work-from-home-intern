@@ -5,7 +5,7 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <div class="d-flex">
-                        <img src="../../assets/rp-logo.png" class="border rounded-circle" alt="" height="75px" width="75px">
+                        <img src="../../../assets/rp-logo.png" class="border rounded-circle" alt="" height="75px" width="75px">
                         <div class="ms-3">
                             <span class="text-heading font-400 text-danger mt-2">Redprix</span>
                             <br>
@@ -33,19 +33,24 @@
                 </div>
               </div>
         </div>
+        <PostModal/>
 </template>
 
 <script>
+import PostModal from './PostModal.vue'
     export default {
         name:'BookModal',
+        components:{
+          PostModal
+        },
         data(){
             return{
                 reviews:[
-                    {id:1,img:require("../../assets/user1.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
-                    {id:2,img:require("../../assets/user2.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
-                    {id:3,img:require("../../assets/user3.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
-                    {id:4,img:require("../../assets/user4.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
-                    {id:5,img:require("../../assets/user5.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
+                    {id:1,img:require("../../../assets/user1.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
+                    {id:2,img:require("../../../assets/user2.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
+                    {id:3,img:require("../../../assets/user3.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
+                    {id:4,img:require("../../../assets/user4.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
+                    {id:5,img:require("../../../assets/user5.jpg"),name:"Roxy Joe",desc:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin."},
                 ]
             }
         }

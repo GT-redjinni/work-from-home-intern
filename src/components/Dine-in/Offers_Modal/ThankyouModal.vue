@@ -5,7 +5,7 @@
                   <div class="modal-body">
                     <div class="contanier">
                         <div class="text-center mt-4 mb-1">
-                                <img src="../../assets/thankyou-img.png" alt="" height="200px" width="240px">
+                                <img src="../../../assets/thankyou-img.png" alt="" height="200px" width="240px">
                             </div>
                         <div class="p-5">
                             <Button class="confirm-btn w-100 p-2 mt-2 text-center" data-bs-dismiss="modal" aria-label="Close">GO TO HOME PAGE</Button>

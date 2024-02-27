@@ -107,21 +107,15 @@
               </div>
 
             <div v-show="activeTab === 'people'" class="content autocomplete-dropdown" id="aboutUs">
-                 <div>
                   <PeopleTab/>
-                 </div>
             </div>
 
             <div v-show="activeTab === 'vendor'" class="content autocomplete-dropdown" id="contactUs">
-                <div>
                   <VendorTab/>
-                 </div>
             </div>
 
             <div v-show="activeTab === 'influencer'" class="content autocomplete-dropdown" id="aboutUs">
-                <div>
                   <InfluencerTab/>
-                 </div>
             </div>
 
             <div v-show="activeTab === 'post'" class="content autocomplete-dropdown" id="aboutUs">
@@ -189,8 +183,8 @@
         </button>
       </router-link>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" v-on:click="this.$router.push({ path: '/me' })" role='button'>My Account</a></li>
-        <li><a class="dropdown-item" v-on:click="this.$router.push({ path: '/edit' })" role='button'>Edit Profile</a></li>
+        <li><a class="dropdown-item" v-on:click="handeMyAccount" role='button'>My Account</a></li>
+        <li><a class="dropdown-item" v-on:click="handeEditProfile" role='button'>Edit Profile</a></li>
         <li><a class="dropdown-item" v-on:click="Signout" role='button'>Sign Out </a></li>
         </ul>
     </div>
@@ -462,6 +456,14 @@ export default{
       handleClick(item){
         this.active=this.active === item ? 'foodfie' : item;
         this.showText = item;
+      },
+      handeMyAccount(){
+          this.active = 'me';
+          this.$router.push('/me')
+      },
+      handeEditProfile(){
+        this.active = 'me';
+        this.$router.push('/edit')
       },
       closeAutocompleteContainer() {
         this.searchQuery = ''; // Clear the search query

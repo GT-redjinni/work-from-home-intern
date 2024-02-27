@@ -10,7 +10,7 @@
                   <div class="modal-body">
                     <div class="contanier">
                         <div class="text-center">
-                            <img src="../../assets/about-logo.jpg" alt="" height="200px" width="240px">
+                            <img src="../../../assets/about-logo.jpg" alt="" height="200px" width="240px">
                         </div>
                         <div class="p-5">
                             <label for="cp" class="cp text-desc font-400">Date</label>
@@ -35,11 +35,16 @@
                 </div>
               </div>
         </div>
+        <ConfirmModal/>
 </template>
 
 <script>
+import ConfirmModal from './ConfirmModal.vue';
     export default {
-        name:'PostModal'
+        name:'PostModal',
+        components:{
+          ConfirmModal
+        },
     }
 </script>
 

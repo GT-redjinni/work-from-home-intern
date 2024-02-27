@@ -60,7 +60,6 @@
         <button type="button" data-bs-toggle="modal" data-bs-target="#bookModal" class="btn text-white mt-3 mb-3 rounded-3 w-100" style="background: #EB0E19;">
             Book Table
         </button>
-        <!-- <BookTableModal/> -->
       </div>
     </div>
   </div>
@@ -68,139 +67,18 @@
         </div>
 
     </div>
+<BookModal/>
 
-<!-- Book table modal -->
-    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true" >
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="d-flex">
-                        <img src="../../assets/rp-logo.png" class="border rounded-circle" alt="" height="75px" width="75px">
-                        <div class="ms-3">
-                            <span class="text-heading font-400 text-danger mt-2">Redprix</span>
-                            <br>
-                            <span class="text-desc font-400 grey-color mt-2">604, Luxuria Business hub, <br> vesu, surat-395004</span>
-                        </div>
-                    </div>
-                    <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div v-for="review in reviews" :key="review.id" class="d-flex border-bottom mt-1 mb-3 p-2">
-                            <div>
-                            <img :src="review.img" class="border rounded-circle" alt="" height="50px" width="50px">
-                            </div>
-                            <div class="text-start mx-2">
-                                <span class="fw-normal text-subheading">{{ review.name }}</span><span class="fw-light text-white bg-success ms-3">*****</span>
-                                <br>
-                                <span class="fw-light text-desc"> {{ review.desc }} </span>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <Button class="decline-btn w-50 p-1 ps-1 pt-1 pe-1 text-center" data-bs-dismiss="modal" aria-label="Close">Cancel</Button>
-                            <Button class="confirm-btn w-50 p-1 ps-1 pt-1 pe-1 text-center" data-bs-toggle="modal" data-bs-target="#postModal">Post</Button>
-                        </div>
-                </div>
-                </div>
-              </div>
-        </div>
-
-<!-- Post modal -->
-    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true" >
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header" style="background: #EB0E19;">
-                    <h5 class="modal-title text-white" id="postModalLabel">Select Date & Time</h5>
-                    <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="contanier">
-                        <div class="text-center">
-                            <img src="../../assets/about-logo.jpg" alt="" height="200px" width="240px">
-                        </div>
-                        <div class="p-5">
-                            <label for="cp" class="cp text-desc font-400">Date</label>
-                            <div class="input-group mb-3 border-bottom rounded-3 border-dark">
-                                <input type="date" class="form-control" style="border: none;">
-                            </div>
-                            <label for="cp" class="cp text-desc font-400">Time</label>
-                            <div class="input-group mb-3 border-bottom rounded-3 border-dark">
-                                <input type="time" class="form-control" style="border: none;">
-                            </div>
-                            <label for="cp" class="cp text-desc font-400">No of Members</label>
-                            <div class="input-group mb-3 border-bottom rounded-3 border-dark">
-                                <input type="number" class="form-control" style="border: none;">
-                            </div>
-                            <br>
-                            <Button class="confirm-btn w-100 p-2 mt-0 text-center" data-bs-toggle="modal" data-bs-target="#bookingConfirmModal">Book Table</Button>
-                        </div>
-                        <div class="text-center">
-                        </div>
-                        </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-<!-- Booking Confirm modal -->
-    <div class="modal fade" id="bookingConfirmModal" tabindex="-1" aria-labelledby="bookingConfirmModalLabel" aria-hidden="true" >
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header" style="background: #EB0E19;">
-                    <h5 class="modal-title text-white" id="bookingConfirmModal">Booking Confirm</h5>
-                    <button type="button" class="btn-close rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="contanier">
-                        <div class="text-center">
-                            <img src="../../assets/about-logo.jpg" alt="" height="200px" width="240px">
-                        </div>
-                        <div class="p-5">
-                            <div class="row">
-                                <div class="col-6 p-1 text-start text-subheading font-600 grey-color">Name</div>
-                                <div class="col-6 p-1 text-end text-subheading font-400 grey-color">Jacky Patel</div>
-                                <div class="col-6 p-1 text-start text-subheading font-600 grey-color">Email Id</div>
-                                <div class="col-6 p-1 text-end text-subheading font-400 grey-color">jackyp12@gmail.com</div>
-                                <div class="col-6 p-1 text-start text-subheading font-600 grey-color">Mobile No</div>
-                                <div class="col-6 p-1 text-end text-subheading font-400 grey-color">8511430509</div>
-                                <div class="col-6 p-1 text-start text-subheading font-600 grey-color">No Of Member</div>
-                                <div class="col-6 p-1 text-end text-subheading font-400 grey-color">5</div>
-                                <div class="col-6 p-1 text-start text-subheading font-600 grey-color">Date</div>
-                                <div class="col-6 p-1 text-end text-subheading font-400 grey-color">5 Jan</div>
-                                <div class="col-6 p-1 text-start text-subheading font-600 grey-color">Time</div>
-                                <div class="col-6 p-1 text-end text-subheading font-400 grey-color">12:30 PM</div>
-                            </div>
-                            <br>
-                            <Button class="confirm-btn w-100 p-2 mt-2 text-center" data-bs-toggle="modal" data-bs-target="#thankyouModal">Book Table</Button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-<!-- Thankyou modal -->
-    <div class="modal fade" id="thankyouModal" tabindex="-1" aria-labelledby="thankyouModalLabel" aria-hidden="true" >
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="contanier">
-                        <div class="text-center mt-4 mb-1">
-                                <img src="../../assets/thankyou-img.png" alt="" height="200px" width="240px">
-                            </div>
-                        <div class="p-5">
-                            <Button class="confirm-btn w-100 p-2 mt-2 text-center" data-bs-dismiss="modal" aria-label="Close">GO TO HOME PAGE</Button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
 
 </template>
 
 <script>
+import BookModal from './Offers_Modal/BookModal.vue';
 export default {
         name:'OffersSection',
+        components:{
+          BookModal
+        },
         data(){
             return{
                 offerClick:'',

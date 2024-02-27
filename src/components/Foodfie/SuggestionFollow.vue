@@ -61,10 +61,6 @@
         <div class="card-body">
             <div class="d-flex mb-3">
                 <img src="../../assets/suggestion-img.jpg" alt="" height="43px" width="43px" class="img border rounded-circle">
-            <!-- <p>Anthondy Daugloi
-                <br>
-                12 mutual friends
-            </p> -->
             <div class="text-start mx-2">
                 <p class="fw-normal name text-subheading">Anand Dalal</p>
                 <p class="fw-light mf text-desc"> 12 mutual friends</p>

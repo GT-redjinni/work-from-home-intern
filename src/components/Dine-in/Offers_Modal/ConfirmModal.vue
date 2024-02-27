@@ -9,7 +9,7 @@
                   <div class="modal-body">
                     <div class="contanier">
                         <div class="text-center">
-                            <img src="../../assets/about-logo.jpg" alt="" height="200px" width="240px">
+                            <img src="../../../assets/about-logo.jpg" alt="" height="200px" width="240px">
                         </div>
                         <div class="p-5">
                             <div class="row">
@@ -34,11 +34,16 @@
                 </div>
               </div>
         </div>
+        <ThankyouModal/>
 </template>
 
 <script>
+import ThankyouModal from './ThankyouModal.vue'
     export default {
-        name:'ConfirmModal'
+        name:'ConfirmModal',
+        components:{
+          ThankyouModal
+        }
     }
 </script>
 
