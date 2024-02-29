@@ -1,10 +1,11 @@
 <template>
+  <SpinnerComponent v-if="loading"/>
   <!-- post 1 -->
   <div v-for="post in userPosts" :key="post.id" class="card border mt-3 rounded-3">
     <div class="card-body">
       <form class="w-100">
-        <img :src="post.userImage" height="40px" width="40px" class="float-start img-posts" />
-        <div class="float-start mx-2">
+        <img :src="post.userImage || defaultProfileImage" height="40px" width="40px" class="float-start img-posts" />
+        <div class="text-start mx-2">
           <h5 class="text-subheading mb-0">{{ post.userName }}</h5>
           <p class="text-desc mt-0">
             <img src="../../assets/time-icon.png" height="15px" width="15px"> {{ post.time }} |
@@ -33,7 +34,7 @@
         <div class="carousel-inner">
           <div v-for="(image, index) in post.postImage" :key="index"
             :class="{ 'carousel-item': true, active: index === 0 }">
-            <img :src="image" class="img-fluid">
+            <img :src="image || defaultPostImage" class="img-fluid">
           </div>
         </div>
         <button v-if="post.postImage.length > 1" class="carousel-control-prev" type="button"
@@ -92,10 +93,13 @@
             </div>
           </form>
         </div>
-        <div class="text-start">
+        <!-- <div class="text-start">
           <a class="nostyle" href="#" v-on:click="this.$router.push({ path: '/post' })">view more comments</a>
-        </div>
-
+        </div> -->
+        <div class="text-start">
+      <!-- Update the v-on:click handler -->
+      <router-link :to="{ name: 'SinglePost', params: { postId: post.id } }" class="nostyle">view more comments</router-link>
+      </div>
       </div>
 
     </div>
@@ -106,57 +110,25 @@
 
 <script>
 import LikesModal from './LikesModal.vue';
-// import axios from '@/axios';
-import { mapActions } from 'vuex';
+import SpinnerComponent from '../SpinnerComponent.vue';
+import { mapState, mapActions } from 'vuex';
 export default {
   name: 'UserPost',
   components: {
-    LikesModal
+    LikesModal,
+    SpinnerComponent
   },
   data() {
     return {
-      userPosts: [
-        {
-          id: 1,
-          userName: 'Rajkumar Gupta',
-          userImage: require('../../assets/user-image.jpg'),
-          time: '30 Min',
-          location: 'Surat City',
-          content: 'On the other hand, we denounce with righteous indignation...',
-          postImage: [require('../../assets/post1.png'), require('../../assets/post1.jpg')],
-          likes: 125,
-          comments: 125,
-          shares: 15,
-          showLikes: true,
-          showShare: false,
-        },
-        {
-          id: 2,
-          userName: 'Rajkumar Gupta',
-          userImage: require('../../assets/user-image.jpg'),
-          time: '30 Min',
-          location: 'Surat City',
-          content: 'On the other hand, we denounce with righteous indignation...',
-          postImage: [require('../../assets/post1.png')],
-          likes: 125,
-          comments: 125,
-          shares: 15,
-          showLikes: true,
-          showShare: false,
-        },
-      ],
+      defaultProfileImage: require('../../assets/user-image.jpg'),
+      defaultPostImage: require('../../assets/post1.png'),
       likes: 125,
       showLikes: true,
       showShare: false,
     }
   },
-
-  created() {
-    // this.loadingPost();
-  },
-
   methods: {
-    ...mapActions(['loadingPost']),
+    ...mapActions('post', ['fetchUserPosts']),
     toggleLikes() {
       if (this.showLikes) {
         this.likes++;
@@ -169,12 +141,21 @@ export default {
     toggleShare() {
       this.showShare = !this.showShare;
     },
-    
+    toggleFollow(user) {
+      user.isFollowing = !user.isFollowing;
+    },
+    setButtonClass(user) {
+      return user.isFollowing ? 'decline-btn' : 'confirm-btn';
+    }
   },
-  mounted(){
-      // console.log(localStorage.getItem('token'));
-      this.loadingPost();
-  }
+  computed: {
+    ...mapState('post', ['userPosts', 'loading']),
+  },
+  created() {
+    // console.log(this.userPosts);
+    this.fetchUserPosts();
+    console.log(this.loading);
+  },
 }
 </script>
 
@@ -257,4 +238,5 @@ a.nostyle:visited {
 .dropdown>.dropdown-toggle:active {
   /*Without this, clicking will make it sticky*/
   pointer-events: none;
-}</style>
+}
+</style>

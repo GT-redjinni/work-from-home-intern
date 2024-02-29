@@ -40,9 +40,10 @@ const routes= [
         component:EditProfile
     },
     {
-        name:'SinglePost',
-        path:'/post',
-        component:SinglePost
+        name: 'SinglePost',
+        path: '/post/:postId',
+        component: SinglePost,
+        props: route => ({ postId: parseInt(route.params.postId) }),
     },
     {
         name:'LogIn',
