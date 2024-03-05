@@ -4,9 +4,8 @@
               <div class="input-group mb-3 border-bottom border-danger">
                 <input type="text" class="form-control" placeholder="Title" style="border: none;">
               </div>
-              <div class="form-floating border border-secondary mb-3">
-                <textarea class="form-control" placeholder="Whats on your mind, Rakesh ?" id="floatingTextarea2"
-                  style="height: 100px">Whats on your mind, Rakesh ?</textarea>
+              <div class="border border-dark-subtle rounded-2 mb-3">
+                <textarea class="form-control" placeholder="Whats on your mind,Rakesh?" style="height: 100px"></textarea>
               </div>
               <div class="input-group mb-3">
                 <input type="file" id="file" style="display: none;" />

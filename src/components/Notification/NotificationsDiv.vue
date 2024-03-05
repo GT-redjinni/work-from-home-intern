@@ -22,7 +22,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
                                 <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
                                 </svg></button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton">
                                     <li><a class="dropdown-item" href="#">Remove notification</a></li>
                                     <li><a class="dropdown-item" href="#">Mute</a></li>
                                     <li><a class="dropdown-item" href="#">Turn off</a></li>
@@ -313,9 +313,13 @@
     display: none;
 }
 .dropdown:hover>.dropdown-menu {
-  display: block;
+    display: block;
+    position: absolute;
+    left: auto; /* Set left to auto to reset any previous left positioning */
+    right: 0; /* Align the right edge of the menu with the button */
+    top: 30%;
+    transform: translateX(-15%); /* Move the menu to the left */
 }
-
 .dropdown>.dropdown-toggle:active {
   /*Without this, clicking will make it sticky*/
     pointer-events: none;

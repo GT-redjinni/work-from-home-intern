@@ -1,8 +1,10 @@
 <template>
     <div class="card">
+        <div class="card-header bg-white border-2">
+            <div class="heading text-subheading grey-color font-600 ms-3 p-2">Security</div>
+        </div>
                         <div class="card-body">
-                        <div class="heading ms-3">About Us</div>
-                        <div class="body text-center border-top mt-3">
+                        <div class="body text-center mt-3">
                             <img src="../../assets/tc-logo.png" alt="" height="150px" width="150px">
                             <br>
                             <h5 class="text-center">You can view all security options here</h5>

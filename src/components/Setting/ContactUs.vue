@@ -1,8 +1,10 @@
 <template>
     <div class="card">
+        <div class="card-header bg-white border-2">
+            <div class="heading text-subheading grey-color font-600 ms-3 p-2">Contact Us</div>
+        </div>
                         <div class="card-body">
-                        <div class="heading ms-3">Contact Us</div>
-                        <div class="body border-top mt-3">
+                        <div class="body mt-3">
                             <form class="form-control border-0 mt-3" style="padding: 10px 50px 10px 50px;">
                                 <label for="cp" class="cp">Full Name</label>
                                 <br>
@@ -18,7 +20,7 @@
                                 <div class="form-outline" data-mdb-input-init>
                                     <textarea class="form-control" id="textAreaExample" rows="4" placeholder="Your Message"></textarea>
                                 </div>
-                                <button class="btn frm-btn text-white w-100 text-center mt-5">RESET PASSWORD</button>
+                                <button class="btn confirm-btn text-white w-100 text-center mt-5">RESET PASSWORD</button>
                             </form>
                             <div class="text-center mt-2">
                                 For more information you can mail on

@@ -1,11 +1,4 @@
 <template>
-    <!-- <div class="card">
-        <div class="card-body">
-            <button >
-                Lauch Modal
-            </button>
-        </div>
-    </div> -->
     <div class="modal fade" id="paymentList" tabindex="-1" aria-labelledby="paymentListLabel" aria-hidden="true" >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">

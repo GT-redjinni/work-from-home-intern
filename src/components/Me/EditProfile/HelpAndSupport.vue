@@ -1,61 +1,63 @@
 <template>
     <div class="card mb-3">
+        <div class="card-header bg-white border-2">
+            <div class="heading text-subheading grey-color font-600 ms-3 p-2">Raise a Ticket</div>
+        </div>
         <div class="card-body">
-            <div class="heading text-subheading grey-color font-600 ms-3">Raise a Ticket</div>
-            <div class="body border-top border-dark mt-3">
-                <form class="form-control border-0" style="padding: 10px 50px 10px 50px;">
-                    <label for="cp" class="cp text-desc font-400">User Name</label>
+            <div class="body">
+                <form class="form-control border-0" style="padding: 5px 50px 10px 50px;">
+                    <label for="cp" class="cp text-desc font-600">User Name</label>
                     <br>
                     <div class="input-group mb-3 border rounded-3 border-dark">
                         <input type="text" class="form-control" style="border: none;">
                     </div>
-                    <label for="cp" class="cp text-desc font-400">Email Address</label>
+                    <label for="cp" class="cp text-desc font-600">Email Address</label>
                     <div class="input-group mb-3 border rounded-3 border-dark">
                         <input type="email" class="form-control" style="border: none;">
                     </div>
-                    <label for="cp" class="cp text-desc font-400">Mobile Number</label>
+                    <label for="cp" class="cp text-desc font-600">Mobile Number</label>
                     <div class="input-group mb-3 border rounded-3 border-dark">
                         <input type="number" class="form-control" style="border: none;" min="10" max="10">
                     </div>
-                    <label for="cp" class="cp text-desc font-400">Address</label>
+                    <label for="cp" class="cp text-desc font-600">Address</label>
                     <br>
                     <div class="input-group mb-3 border rounded-3 border-dark">
                         <input type="text" class="form-control" style="border: none;">
                     </div>
 
-                    <div class="row input-group mb-1">
+                    <div class="row mb-1">
                         <div class="col">
-                            <label for="cp" class="cp text-desc font-400">Country</label>
+                            <label for="cp" class="cp text-desc font-600">Country</label>
                             <div class="input-group mb-3 border rounded-3 border-dark">
                                 <input type="text" class="form-control" style="border: none;">
                                 </div>
                         </div>
                         <div class="col">
-                            <label for="cp" class="cp text-desc font-400">State</label>
+                            <label for="cp" class="cp text-desc font-600">State</label>
                             <div class="input-group mb-3 border rounded-3 border-dark">
                                 <input type="number" class="form-control" style="border: none;" min="6" max="6">
                                  </div>
                         </div>
                     </div>
-                    <div class="row input-group mb-1">
+                    <div class="row mb-1">
                         <div class="col">
-                            <label for="cp" class="cp text-desc font-400">City</label>
+                            <label for="cp" class="cp text-desc font-600">City</label>
                             <div class="input-group mb-3 border rounded-3 border-dark">
                                 <input type="text" class="form-control" style="border: none;">
                                 </div>
                         </div>
                         <div class="col">
-                            <label for="cp" class="cp text-desc font-400">Pin</label>
+                            <label for="cp" class="cp text-desc font-600">Pin</label>
                             <div class="input-group mb-3 border rounded-3 border-dark">
                                 <input type="number" class="form-control" style="border: none;">
                                  </div>
                         </div>
                     </div>
-                    <label for="cp" class="cp text-desc font-400">Upload Photo</label>
+                    <label for="cp" class="cp text-desc font-600">Upload Photo</label>
                     <div class="input-group mb-3 border rounded-3 border-dark">
                         <input type="email" class="form-control" style="border: none;">
                     </div>
-                    <label for="cp" class="cp text-desc font-400">Describe the problem</label>
+                    <label for="cp" class="cp text-desc font-600">Describe the problem</label>
                     <div class="input-group mb-3">
                         <textarea name="address" id="address" cols="100" rows="4" style="border: 1px solid black;border-radius: 8px;"></textarea>
                     </div>
@@ -74,4 +76,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+</style>

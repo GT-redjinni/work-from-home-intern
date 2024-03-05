@@ -33,14 +33,14 @@ export default{
         password:this.user.password
       })
       this.$router.push('/foodfie');
-    }
+    },
   },
   mounted(){
     let user = localStorage.getItem('token');
     if (user) {
-      this.$router.push('/foodfie')
+      this.$router.push('/foodfie');
     }
-  }
+  },
 };
 </script>
 

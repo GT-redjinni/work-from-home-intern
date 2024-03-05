@@ -14,8 +14,8 @@
                 <br>
                 <ProfilePizza />
             </div>
-            <div class="col-md-6 mb-3" style="overflow-y: scroll;max-height: 720px;">
-                <NotificationsDiv/>
+            <div class="col-md-6 mb-3 notification-div">
+                <NotificationsDiv />
             </div>
             <div class="col-md-3">
                 <SuggestionIcecream />
@@ -43,5 +43,11 @@ export default {
 </script>
 
 <style scoped>
-
+.notification-div{
+    overflow-y: scroll;
+    max-height: 720px;
+}
+.notification-div::-webkit-scrollbar {
+  display: none;
+}
 </style>

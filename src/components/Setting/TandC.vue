@@ -1,8 +1,10 @@
 <template>
     <div class="card mb-3">
+        <div class="card-header bg-white border-2">
+            <div class="heading text-subheading grey-color font-600 ms-3 p-2">Terms & Conditions</div>
+        </div>
                         <div class="card-body">
-                        <div class="heading ms-3">Terms & Conditions</div>
-                        <div class="body text-center border-top mt-3">
+                        <div class="body text-center mt-3">
                             <img src="../../assets/tc-logo.png" alt="" height="150px" width="150px">
                             <br>
                             <p style="padding: 20px 40px 10px 40px;text-align: start;">

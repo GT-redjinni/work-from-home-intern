@@ -1,8 +1,10 @@
 <template>
     <div class="card">
+        <div class="card-header bg-white border-2">
+            <div class="heading text-subheading grey-color font-600 ms-3 p-2">Blocked Accounts</div>
+        </div>
         <div class="card-body">
-            <div class="heading text-subheading grey-color font-600 ms-3">Blocked Accounts</div>
-            <div class="body border-top border-dark mt-3">
+            <div class="body">
                 <div>
                     <h4 class="text-center mt-5 mb-3">No Record Found !</h4>
                 </div>
@@ -18,4 +20,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+</style>

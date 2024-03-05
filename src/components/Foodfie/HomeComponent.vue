@@ -30,7 +30,7 @@ export default{
 </script>
 
 <style scoped>
-.fixed-column {
+/* .fixed-column {
   position: sticky;
   top: 0;
 }
@@ -41,5 +41,5 @@ export default{
 }
 .scrollable-column::-webkit-scrollbar {
   display: none;
-}
+} */
 </style>

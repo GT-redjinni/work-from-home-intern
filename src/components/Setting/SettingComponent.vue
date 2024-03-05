@@ -3,125 +3,125 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-3">
+                <div class="text-start p-3 text-white rounded-top" style="background: #EB0E19;">
+                    <span class="text-subheading text-white font-600 color-dark ms-2">Setting </span> 
+                </div>
             <ul class="list-group bg-light rounded-3">
-                        <div class="text-start p-3 text-white rounded-top" style="background: #EB0E19;">
-                                <span class="fw-semibold color-dark ms-3">Setting </span> 
-                        </div>
-                <button :class="{ 'btn-list-active': activeTab === 'changePass' }" class="btn btn-list mt-2 border rounded-2 p-2 m-1" v-on:click="showContent('changePass')">
+                <button :class="{ 'btn-list-active': activeTab === 'changePass' }" class="btn btn-list mt-3" v-on:click="showContent('changePass')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">Change Password </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'changePass' ? 'white' : '' }">Change Password </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'vendorAccount' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('vendorAccount')">
+                <button :class="{ 'btn-list-active': activeTab === 'vendorAccount' }" class="btn btn-list mt-1 " @click="showContent('vendorAccount')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">My vendor Account </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'vendorAccount' ? 'white' : '' }">My vendor Account </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'termsAndCondition' }" class="btn btn-list border rounded-2 p-2 m-1" @click="this.$router.push({path:'/notification'})">
+                <button :class="{ 'btn-list-active': activeTab === 'notification' }" class="btn btn-list mt-1 " @click="this.$router.push({path:'/notification'})">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">Notification </span> 
+                                <span class="text-subheading-2 grey-color font-600">Notification </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'permission' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('permission')">
+                <button :class="{ 'btn-list-active': activeTab === 'permission' }" class="btn btn-list mt-1 " @click="showContent('permission')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">Permission </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'permission' ? 'white' : '' }">Permission </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'security' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('security')">
+                <button :class="{ 'btn-list-active': activeTab === 'security' }" class="btn btn-list mt-1 " @click="showContent('security')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">Security </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'security' ? 'white' : '' }">Security </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'privacyPolicy' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('privacyPolicy')">
+                <button :class="{ 'btn-list-active': activeTab === 'privacyPolicy' }" class="btn btn-list mt-1 " @click="showContent('privacyPolicy')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">Privacy Policy </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'privacyPolicy' ? 'white' : '' }">Privacy Policy </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'termsAndCondition' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('termsAndCondition')">
+                <button :class="{ 'btn-list-active': activeTab === 'termsAndCondition' }" class="btn btn-list mt-1 " @click="showContent('termsAndCondition')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">Terms And Condition </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'termsAndCondition' ? 'white' : '' }">Terms And Condition </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'aboutUs' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('aboutUs')">
+                <button :class="{ 'btn-list-active': activeTab === 'aboutUs' }" class="btn btn-list mt-1 " @click="showContent('aboutUs')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">About Us </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'aboutUs' ? 'white' : '' }">About Us </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'contactUs' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('contactUs')">
+                <button :class="{ 'btn-list-active': activeTab === 'contactUs' }" class="btn btn-list mt-1 " @click="showContent('contactUs')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">Contact Us </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'contactUs' ? 'white' : '' }">Contact Us </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
                         </div>
                 </button>
-                <button :class="{ 'btn-list-active': activeTab === 'faqs' }" class="btn btn-list border rounded-2 p-2 m-1" @click="showContent('faqs')">
+                <button :class="{ 'btn-list-active': activeTab === 'faqs' }" class="btn btn-list mt-1  mb-5" @click="showContent('faqs')">
                     <div class="d-flex">
                         <div class="text-start ms-3">
-                                <span class="fw-semibold">FAQ’s </span> 
+                                <span class="text-subheading-2 grey-color font-600" :style="{ color: activeTab === 'faqs' ? 'white' : '' }">FAQ’s </span> 
                         </div>
-                        <div class="ms-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <div class="ms-auto me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </div>
@@ -129,7 +129,7 @@
                 </button>
             </ul>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7 overflow" style="overflow-y: scroll;max-height: 660px;">
                     <div v-show="activeTab === 'changePass'" class="content" id="changePass">
                         <ChangePassword/>
                     </div>
@@ -199,7 +199,7 @@ import FaqS from './FaqS.vue'
     }
 </script>
 
-<style>
+<style scoped>
 .content {
   display: none;
   width: 100%;
@@ -211,22 +211,18 @@ import FaqS from './FaqS.vue'
   display: block;
 }
 button{
-    border: none;
-    /* background: transparent; */
     text-align: left;
+    padding: 10px 15px 15px 10px;
 }
-
-.frm-btn{
-    background: #EB0E19;
-    color: #ffffff;
-}
-
-.btn-list{
+.btn-list, .btn-list:hover{
     background-color: #F5E8E8;
 }
-.btn-list-active {
+.btn-list-active, .btn-list-active:hover {
   background-color: #FF9BA0;
   opacity: 100%;
   color: whitesmoke;
+} 
+.overflow::-webkit-scrollbar {
+    display: none;
 }
 </style>
