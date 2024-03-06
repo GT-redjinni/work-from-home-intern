@@ -46,14 +46,20 @@
   <input type="text" class="form-control" placeholder="Confirm Password" style="border: none;">
   </div>
 
-  <div class="row input-group mb-3">
-      <div class="col">
-          <input type="text" class="form-control border-bottom border-dark" placeholder="GST No" style="border: none;" >
-      </div>
-      <div class="col">
-          <input type="text" class="form-control border-bottom border-dark" placeholder="Mobile No" style="border: none;" >
-      </div>
-  </div>
+  <div class="row mb-3">
+                        <div class="col">
+                            <div class="input-group border-bottom border-dark">
+                                <input type="number" class="form-control" placeholder="GST No."
+                                    style="border: none;">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input-group border-bottom border-dark">
+                                <input type="number" class="form-control" placeholder="Mobile No."
+                                    style="border: none;">
+                            </div>
+                        </div>
+                    </div>
 
   <div class="input-group mb-3 border-bottom border-dark">
   <input type="text" class="form-control" placeholder="Amount I Pay" style="border: none;">
@@ -127,5 +133,8 @@ display: flex;
     transform: translate(-50%, -50%);
 }
 
-
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
 </style>

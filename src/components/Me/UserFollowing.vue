@@ -7,7 +7,7 @@
           aria-label="Search"></span>
     </div>
     <div class="row mt-3 ms-2 me-2 mb-3">
-      <div v-for="following in filteredFollowings" :key="following.id" class="col-md-6 rounded-3 mt-2 mb-2 p-2"
+      <div v-for="following in filteredFollowings" :key="following.id" class="col-sm-12 col-md-12 col-lg-6 rounded-3 mt-2 mb-2 p-2"
         style="border: .5px solid #787878;">
         <div class="d-flex mt-1 mb-1">
           <img :src="following.image" alt="" height="43px" width="43px" class="img border rounded-circle">

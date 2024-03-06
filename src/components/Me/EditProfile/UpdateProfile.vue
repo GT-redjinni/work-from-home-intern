@@ -33,7 +33,7 @@
                             style="border: none;">
                     </div>
                     <div class="input-group mb-3 border-bottom border-dark">
-                        <input type="text" class="form-control" placeholder="Mobile Number" style="border: none;">
+                        <input type="text" class="form-control" placeholder="Mobile Number" style="border: none;" maxlength="10">
                     </div>
 
                 </div>
@@ -45,9 +45,6 @@
                     <div class="input-group mb-3 border-bottom border-danger">
                         <input type="text" class="form-control" placeholder="Address" style="border: none;">
                     </div>
-                    <!-- <div class="input-group mb-3 border-bottom border-dark">
-                                    <input type="password" class="form-control" placeholder="New Password" style="border: none;">
-                                </div> -->
                     <div class="row mb-3">
                         <div class="col">
                             <div class="input-group mb-3 border-bottom border-dark">

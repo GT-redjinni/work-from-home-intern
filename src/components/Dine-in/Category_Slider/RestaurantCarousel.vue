@@ -30,9 +30,9 @@
         return{
             brandsData:[
                 {id:1,name:'Royal Dine',img:require('../../../assets/vijaydairy-logo.png')},
-                {id:2,name:'Lemon Grass',img:require('../../../assets/goldycakes-logo.png')},
+                {id:2,name:'Lemon Grass',img:require('../../../assets/lemongrass-logo.png')},
                 {id:3,name:'Uncle Sammy',img:require('../../../assets/unclesammy-logo.jpg')},
-                {id:4,name:'Level 5',img:require('../../../assets/gentsalon-logo.jpg')},
+                {id:4,name:'Level 5',img:require('../../../assets/level5-logo.jpg')},
             ]
         }
     },

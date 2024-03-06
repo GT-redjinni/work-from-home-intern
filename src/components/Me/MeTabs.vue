@@ -65,6 +65,7 @@ import UserRequest from '../Me/UserRequest.vue';
   .tags {
     font-size: 18px;
     padding-bottom: 5px;
+    text-align: center;
   }
 }
 </style>

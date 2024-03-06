@@ -1,12 +1,14 @@
 <template>
   <div class="card">
-    <div class="card-header border-bottom border-dark">
-                <p class="float-start text-subheading font-600 grey-color">
+    <div class="card-header border-bottom border-dark bg-white">
+              <p>
+                <span class="float-start text-subheading font-600 grey-color">
                   125 Post
-                </p>
-                <p class="float-end text-desc font-400 grey-color">
+                </span>
+                <span class="float-end text-desc font-400 grey-color">
                   See All Post
-                </p>
+                </span>
+              </p>
               </div>
               
               <div class="card-body">
@@ -30,5 +32,8 @@
     }
     </script>
     
-    <style>
+    <style scoped>
+    img{
+      object-fit: cover;
+    }
     </style>

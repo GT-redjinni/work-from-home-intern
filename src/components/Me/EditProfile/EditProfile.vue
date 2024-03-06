@@ -20,7 +20,7 @@
                             </div>
                             </div>
                     </button>
-                    <button :class="{ 'btn-list-active': activeTab === 'PaymentDetails' }" class="btn btn-list mt-1 p-2" v-on:click="showContent('PaymentDetails')" data-bs-toggle="modal" data-bs-target="#paymentList">
+                    <button  class="btn btn-list mt-1 p-2" data-bs-toggle="modal" data-bs-target="#paymentList">
                         <div class="d-flex">
                             <div class="ms-2 rounded-circle p-1" :style="{ background: activeTab === 'PaymentDetails' ? '#EB0E19' : '' }">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
@@ -141,9 +141,9 @@
                     <div v-show="activeTab === 'UpdateProfile'" class="content" id="UpdateProfile">
                         <UpdateProfile/>
                     </div>
-                    <div v-show="activeTab === 'PaymentDetails'" class="content" id="PaymentDetails">
+                    <!-- <div v-show="activeTab === 'PaymentDetails'" class="content" id="PaymentDetails"> -->
                         <PaymentDetails/>
-                    </div>
+                    <!-- </div> -->
                     <div v-show="activeTab === 'BecomeVendor'" class="content" id="BecomeVendor">
                         <BecomeVendor/>
                     </div>
@@ -162,7 +162,6 @@
                     <div v-show="activeTab === 'BlockedAccount'" class="content" id="BlockedAccount">
                         <BlockedAccount/>
                     </div>
-
                 </div>
                 <div class="col-md-1"></div>
         </div>

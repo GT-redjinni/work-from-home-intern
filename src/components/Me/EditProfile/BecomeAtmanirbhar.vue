@@ -112,7 +112,7 @@
                         <input type="file" class="form-control" style="border: none;">
                     </div>
                     <input type="checkbox" class="mb-3" required> I declare that my annual income is less than Rs 3 LPA
-                    <button class="btn frm-btn text-white w-100 text-center mt-1">Next</button>
+                    <button class="btn confirm-btn text-white w-100 text-center mt-1">Next</button>
                 </form>
             </div>
 

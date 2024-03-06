@@ -29,9 +29,9 @@
     data(){
         return{
             brandsData:[
-                {id:1,name:'Style Salon',img:require('../../../assets/vijaydairy-logo.png')},
+                {id:1,name:'Style Salon',img:require('../../../assets/style-logo.png')},
                 {id:2,name:'A-one Salon',img:require('../../../assets/aone-logo.jpg')},
-                {id:3,name:'Gents Salon',img:require('../../../assets/unclesammy-logo.jpg')},
+                {id:3,name:'Gents Salon',img:require('../../../assets/gentsalon-logo.jpg')},
                 {id:4,name:'Jawed Habib',img:require('../../../assets/jw-logo.png')},
             ]
         }

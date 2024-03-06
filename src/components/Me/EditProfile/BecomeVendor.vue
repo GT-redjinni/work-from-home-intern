@@ -19,7 +19,7 @@
                     </div>
                     <label for="cp" class="cp text-desc font-600">Business Contact</label>
                     <div class="input-group mb-3 border rounded-3 border-dark">
-                        <input type="text" class="form-control" style="border: none;">
+                        <input type="number" class="form-control" style="border: none;" min="10" max="10">
                     </div>
                     <label for="cp" class="cp text-desc font-600">Address</label>
                     <br>

@@ -61,4 +61,8 @@ label {
   border-radius: 6px;
   cursor: pointer;
 }
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
 </style>

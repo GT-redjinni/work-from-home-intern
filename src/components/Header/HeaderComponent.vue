@@ -225,8 +225,9 @@
           aria-labelledby="navbarOffcanvasLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="navbarOffcanvasLabel">
+            <h5 class="offcanvas-title text-center" id="navbarOffcanvasLabel">
               <a class="navbar-brand ms-5" v-on:click="this.$router.push({ path: '/foodfie' })" data-bs-dismiss="offcanvas"><img src="../../assets/rp-logo.png" alt="" height="50px" width="50px" /></a>
+              <span class="text-subheading red-color">Redprix</span> 
             </h5>
             <button
               type="button"

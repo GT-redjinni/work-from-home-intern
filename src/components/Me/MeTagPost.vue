@@ -1,19 +1,15 @@
 <template>
   <div class="card">
-    <div class="card-header border-bottom border-dark">
-                <p class="float-start text-subheading font-600 grey-color">
+    <div class="card-header border-bottom border-dark bg-white">
+              <p>
+                <span class="float-start text-subheading font-600 grey-color">
                   Tag Post
-                </p>
-                <p class="float-end text-desc font-400 grey-color">
+                </span>
+                <span class="float-end text-desc font-400 grey-color">
                   See All Post
-                </p>
+                </span>
+              </p>
               </div>
-              <!-- <div class="container">
-                <div class="d-flex justify-content-between m-2" style="border-bottom: 1px solid black;">
-                <p class="text-start" style="font-weight: 600;">Post 300</p>
-                <p class="text-end" style="font-weight: 600;">See All</p>
-              </div>
-              </div> -->
               <div class="card-body">
                 <div class="row">
                     <div class="col-4"><img src="../../assets/ppost-1.jpg" class="border border-dark rounded w-100" height="70px" width="70px"></div>
@@ -35,5 +31,9 @@
     }
     </script>
     
-    <style>
+    <style scoped>
+    img{
+      object-fit: cover;
+      border:none
+    }
     </style>

@@ -27,10 +27,12 @@
     color: #ffffff;
     border-radius: 8px;
     transition: 0.3s ease-in;
+    border: none;
 }
 .decline-btn{
     background: #E8E8E8;
     color: #9A9A9A;
     border-radius: 8px;
     transition: 0.3s ease-out;
+    border: none;
 }
