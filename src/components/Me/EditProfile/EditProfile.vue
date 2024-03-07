@@ -2,7 +2,7 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-3">
+            <div class="col-sm-12 col-md-3 col-lg-3">
                 <div class="text-start p-3 text-white rounded-top" style="background: #EB0E19;">
                     <span class="text-subheading text-white font-600 color-dark ms-2">Menu </span> 
                 </div>
@@ -137,7 +137,7 @@
                     </button>
             </ul>
             </div>
-            <div class="col-md-7 overflow" style="overflow-y: scroll;max-height: 660px;">
+            <div class="col-md-8 col-sm-12 col-lg-7 overflow" style="overflow-y: scroll;max-height: 660px;">
                     <div v-show="activeTab === 'UpdateProfile'" class="content" id="UpdateProfile">
                         <UpdateProfile/>
                     </div>

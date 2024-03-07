@@ -3,43 +3,48 @@
         <div class="card-header bg-white border-2">
             <div class="heading text-subheading grey-color font-600 ms-3 p-2">Update Profile</div>
         </div>
-        <div class="card-body mb-3">
-            <div class="body mt-3" style="display: flex; align-items: center; justify-content: space-between;">
-                <div style="flex: 1;" class="ms-5 mt-2">
-                    <div class="dropdown" role="button">
-                        <img src="../../../assets/user-image.jpg" alt="" height="250px" width="250px"
-                            class="rounded-circle" style="object-fit: cover;">
-                        <img src="../../../assets/input-camera.png" alt="" height="25px" width="25px"
-                            class="rounded-circle input_camera">
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" @click="removePhoto()" role="button">Remove profile photo</a>
-                            </li>
-                            <li><a class="dropdown-item" @click="changePhoto()" role="button">Change profile photo</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div style="flex: 2; padding: 10px 75px 10px 75px;">
-                    <label for="cp" class="cp text-desc font-600">First Name</label>
-                    <br>
-                    <div class="input-group mb-3 border-bottom border-danger">
-                        <input type="text" class="form-control" placeholder="Rakesh" style="border: none;">
-                    </div>
-                    <div class="input-group mb-3 border-bottom border-dark">
-                        <input type="text" class="form-control" placeholder="Prajapati" style="border: none;">
-                    </div>
-                    <div class="input-group mb-3 border-bottom border-dark">
-                        <input type="email" class="form-control" placeholder="rakeshprajapati@gmail.com"
-                            style="border: none;">
-                    </div>
-                    <div class="input-group mb-3 border-bottom border-dark">
-                        <input type="text" class="form-control" placeholder="Mobile Number" style="border: none;" maxlength="10">
-                    </div>
 
+        <div class="card-body mb-3">
+            <div class="d-flex bg-white">
+                <div class="row w-100 mt-3">
+                    <span class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="text-center">
+                            <img src="../../../assets/user-image.jpg" alt="" height="220rem" width="220rem"
+                                class="rounded-circle" style="object-fit: cover;">
+                            <span class="dropdown">
+                                <img src="../../../assets/input-camera.png" alt="" height="25px" width="25px"
+                                    class="rounded-circle input_camera" role="button">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" @click="removePhoto()" role="button">Remove profilephoto</a></li>
+                                    <li><a class="dropdown-item" @click="changePhoto()" role="button">Change profilephoto</a></li>
+                                </ul>
+                            </span>
+                        </div>
+                    </span>
+                    <span class="col-sm-12 col-md-12 col-lg-6">
+                        <form class="form-control border-0">
+                            <label for="cp" class="cp text-desc font-600 text-start">First Name</label>
+                            <br>
+                            <div class="input-group mb-3 border-bottom border-danger">
+                                <input type="text" class="form-control" placeholder="Rakesh" style="border: none;">
+                            </div>
+                            <div class="input-group mb-3 border-bottom border-dark">
+                                <input type="text" class="form-control" placeholder="Prajapati" style="border: none;">
+                            </div>
+                            <div class="input-group mb-3 border-bottom border-dark">
+                                <input type="email" class="form-control" placeholder="rakeshprajapati@gmail.com"
+                                    style="border: none;">
+                            </div>
+                            <div class="input-group mb-3 border-bottom border-dark">
+                                <input type="text" class="form-control" placeholder="Mobile Number"
+                                    style="border: none;" maxlength="10">
+                            </div>
+                        </form>
+                    </span>
                 </div>
             </div>
             <div>
-                <form class="form-control border-0" style="padding: 10px 50px 10px 50px;">
+                <form class="form-control border-0">
                     <label for="cp" class="cp text-desc font-600">Address</label>
                     <br>
                     <div class="input-group mb-3 border-bottom border-danger">
@@ -101,15 +106,6 @@ export default {
 </script>
 
 <style scoped>
-.input_camera {
-    position: absolute;
-    left: 80%;
-    top: 80%;
-    right: inherit;
-    bottom: auto;
-    cursor: pointer;
-}
-
 input:focus {
     outline: none;
     box-shadow: none;
@@ -117,10 +113,41 @@ input:focus {
 
 .dropdown:hover>.dropdown-menu {
     display: block;
+    position: absolute;
+    left: auto; /* Set left to auto to reset any previous left positioning */
+    right: 0; /* Align the right edge of the menu with the button */
+    top: 420%;
+    transform: translateX(-22%); /* Move the menu to the left */
 }
 
 .dropdown>.dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
+}
+
+.input_camera {
+    margin-left: -12%;
+    margin-top: 45%;
+}
+
+@media (max-width: 576px) {
+    .input_camera {
+        margin-left: -12%;
+        margin-top: 45%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .input_camera {
+        margin-left: -12%;
+        margin-top: 40%;
+    }
+}
+
+@media (min-width: 768px)and (max-width: 992px) {
+    .input_camera {
+        margin-left: -12%;
+        margin-top: 40%;
+    }
 }
 </style>

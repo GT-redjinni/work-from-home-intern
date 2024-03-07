@@ -5,36 +5,36 @@
         </div>
         <div class="card-body">
             <div class="body">
-                <form class="form-control border-0" style="padding: 5px 50px 10px 50px;">
+                <form class="form-control border-0" style="padding: 5px 30px 10px 30px;">
                     <label for="cp" class="cp text-desc font-600">User Name</label>
                     <br>
-                    <div class="input-group mb-3 border rounded-3 border-dark">
+                    <div class="input-group mb-3 border-bottom border-danger">
                         <input type="text" class="form-control" style="border: none;">
                     </div>
                     <label for="cp" class="cp text-desc font-600">Email Address</label>
-                    <div class="input-group mb-3 border rounded-3 border-dark">
+                    <div class="input-group mb-3 border-bottom border-dark">
                         <input type="email" class="form-control" style="border: none;">
                     </div>
                     <label for="cp" class="cp text-desc font-600">Mobile Number</label>
-                    <div class="input-group mb-3 border rounded-3 border-dark">
+                    <div class="input-group mb-3 border-bottom border-dark">
                         <input type="number" class="form-control" style="border: none;" min="10" max="10">
                     </div>
                     <label for="cp" class="cp text-desc font-600">Address</label>
                     <br>
-                    <div class="input-group mb-3 border rounded-3 border-dark">
+                    <div class="input-group mb-3 border-bottom border-dark">
                         <input type="text" class="form-control" style="border: none;">
                     </div>
 
                     <div class="row mb-1">
                         <div class="col">
                             <label for="cp" class="cp text-desc font-600">Country</label>
-                            <div class="input-group mb-3 border rounded-3 border-dark">
-                                <input type="text" class="form-control" style="border: none;">
+                            <div class="input-group mb-3 border-bottom border-dark">
+                                <input type="text" class="form-control" style="border: none;" value="India" readonly>
                             </div>
                         </div>
                         <div class="col">
                             <label for="cp" class="cp text-desc font-600">Area Pincode</label>
-                            <div class="input-group mb-3 border rounded-3 border-dark">
+                            <div class="input-group mb-3 border-bottom border-dark">
                                 <input type="number" class="form-control" style="border: none;" min="6" max="6">
                             </div>
                         </div>
@@ -42,35 +42,35 @@
                     <div class="row mb-1">
                         <div class="col">
                             <label for="cp" class="cp text-desc font-600">State</label>
-                            <div class="input-group mb-3 border rounded-3 border-dark">
-                                <input type="text" class="form-control" style="border: none;">
+                            <div class="input-group mb-3 border-bottom border-dark">
+                                <input type="text" class="form-control" style="border: none;" placeholder="Select Your state">
                             </div>
                         </div>
                         <div class="col">
                             <label for="cp" class="cp text-desc font-600">City</label>
-                            <div class="input-group mb-3 border rounded-3 border-dark">
-                                <input type="number" class="form-control" style="border: none;">
+                            <div class="input-group mb-3 border-bottom border-dark">
+                                <input type="text" class="form-control" style="border: none;" placeholder="Select Your city">
                             </div>
                         </div>
                     </div>
                     <div v-for="(platform, index) in platforms" :key="index" class="row mb-1">
                         <div class="col">
                             <label for="cp" class="cp text-desc font-600">Platform</label>
-                            <div class="input-group mb-3 border rounded-3 border-dark">
+                            <div class="input-group mb-3 border-bottom border-dark">
                                 <input v-model="platform.platform" type="text" class="form-control"
                                     style="border: none;">
                             </div>
                         </div>
                         <div class="col">
                             <label for="cp" class="cp text-desc font-600">Social Media Link</label>
-                            <div class="input-group mb-3 border rounded-3 border-dark">
+                            <div class="input-group mb-3 border-bottom border-dark">
                                 <input v-model="platform.socialMediaLink" type="url" class="form-control"
                                     style="border: none;">
                             </div>
                         </div>
                         <div class="col">
                             <label for="cp" class="cp text-desc font-600">Follower</label>
-                            <div class="input-group mb-3 border rounded-3 border-dark">
+                            <div class="input-group mb-3 border-bottom border-dark">
                                 <input v-model="platform.follower" type="number" class="form-control"
                                     style="border: none;">
                             </div>

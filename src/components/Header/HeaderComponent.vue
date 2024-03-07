@@ -2,7 +2,7 @@
   <div>
 <nav class="navbar navbar-expand-lg  bg-white d-none d-lg-block">
   <div class="container">
-    <a class="navbar-brand ms-5"><img src="../../assets/rp-logo.png" alt="" height="50px" width="50px" /></a>
+    <a class="navbar-brand ms-5" v-on:click="handeFoodfie" role="button"><img src="../../assets/rp-logo.png" alt="" height="50px" width="50px" /></a>
     
     <div class="input-group" >
   <input type="text" class="form-control" placeholder="Search People,Pages,Groups..." style="background-color: #F5E8E8" v-model="searchQuery" @input="handleSearch">
@@ -201,7 +201,7 @@
         <div class="d-flex">
 
           <div class="text-start ms-0">    
-            <a class="navbar-brand ms-5" v-on:click="this.$router.push({ path: '/foodfie' })"><img src="../../assets/rp-logo.png" alt="" height="50px" width="50px" /></a>
+            <a class="navbar-brand ms-5" v-on:click="handeFoodfie" role="button"><img src="../../assets/rp-logo.png" alt="" height="50px" width="50px" /></a>
           </div>
 
           <div class="ms-auto me-2 mt-1">
@@ -226,7 +226,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title text-center" id="navbarOffcanvasLabel">
-              <a class="navbar-brand ms-5" v-on:click="this.$router.push({ path: '/foodfie' })" data-bs-dismiss="offcanvas"><img src="../../assets/rp-logo.png" alt="" height="50px" width="50px" /></a>
+              <a class="navbar-brand ms-5" v-on:click="handeFoodfie" data-bs-dismiss="offcanvas" role="button"><img src="../../assets/rp-logo.png" alt="" height="50px" width="50px" /></a>
               <span class="text-subheading red-color">Redprix</span> 
             </h5>
             <button
@@ -461,6 +461,10 @@ export default{
       handeMyAccount(){
           this.active = 'me';
           this.$router.push('/me')
+      },
+      handeFoodfie(){
+          this.active = 'foodfie';
+          this.$router.push('/foodfie')
       },
       handeEditProfile(){
         this.active = 'me';
