@@ -211,6 +211,18 @@ import BlockedAccount from './BlockedAccount.vue';
             else {
                 // For other tabs, change the active tab directly
                 this.activeTab = tab;
+                this.scrollToContent(tab);
+            }
+        },
+        scrollToContent(contentId) {
+            const element = document.getElementById(contentId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest',
+                });
             }
         },
     },

@@ -7,13 +7,13 @@
             <div class="body text-center mt-2">
                 <img src="../../assets/cp-logo.png" alt="" height="150px" width="150px">
                 <br>
-                <p style="padding: 20px 75px 10px 75px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                <p style="padding: 10px 30px 10px 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                     quasi vel esse saepe officia odit excepturi dicta voluptatem, mollitia voluptas culpa
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                     quasi vel esse saepe officia odit excepturi dicta voluptatem, mollitia voluptas culpa</p>
             </div>
             <div>
-                <form class="form-control border-0" style="padding: 10px 50px 10px 50px;">
+                <form class="form-control border-0" style="padding: 10px 30px 10px 30px;">
                     <label for="cp" class="cp">Current Password</label>
                     <br>
                     <div class="input-group mb-3 border-bottom border-danger">

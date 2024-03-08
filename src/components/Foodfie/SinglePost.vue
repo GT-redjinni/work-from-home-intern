@@ -2,7 +2,7 @@
   <div class="container ms-auto">
     <div class="row">
       <div class="col-3"></div>
-      <div class="col-6">
+      <div class="col-sm-12 col-md-12 col-lg-6">
         <div class="card border mt-3">
           <div class="card-body">
             <form class="w-100">
@@ -33,32 +33,33 @@
             </form>
             <p class="text-start">{{ singlePost.content }}</p>
             <img :src="singlePost.postImage[0] || defaultPostImage" class="img-fluid">
-            <div class="btn-group mt-3 action-buttons row">
-              <div class="col-6 col-md-3">
-                <button type="button" class="btn mx-4" v-on:click="toggleLikes">
+            <div class="btn-group mt-3 action-buttons row text-center">
+              <div class="col-4">
+                <button type="button" class="btn" v-on:click="toggleLikes">
                   <div class="icon-count-container">
                     <img src="../../assets/like-icon.svg" class="lcsv" />
                     <span class="count">{{ singlePost.likes }} likes</span>
                   </div>
                 </button>
               </div>
-              <div class="col-6 col-md-3">
-                <button type="button" class="btn mx-4" v-on:click="toggleComments">
+              <div class="col-4">
+                <button type="button" class="btn" v-on:click="toggleComments">
                   <div class="icon-count-container">
                     <img src="../../assets/comment-icon.svg" class="lcsv" />
                     <span class="count">125 comments</span>
                   </div>
                 </button>
               </div>
-              <div class="col-6 col-md-3">
-                <button type="button" class="btn mx-4" v-on:click="toggleShare">
+              <div class="col-4">
+                <button type="button" class="btn" v-on:click="toggleShare">
                   <div class="icon-count-container">
                     <img src="../../assets/share-icon.svg" class="lcsv" />
                     <span class="count">15 share</span>
                   </div>
                 </button>
               </div>
-              <div class="mt-3 text-start">
+            </div>
+              <div class="mt-3 text-start row">
                 <form class="w-100 text-start mt-3">
                   <img src="../../assets/user1.jpg" class="img-search rounded-circle" height="50px" width="50px" />
                   <div class="float-start comments w-100">
@@ -108,12 +109,14 @@
                   </div>
                 </form>
 
-              </div>
-              <div class="text-start">
+                <div class="text-start">
                 <a href="#" class="nostyle">view more comments</a>
               </div>
 
-            </div>
+              </div>
+              
+
+            
 
 
             <div v-if="showComments" class="mt-3 text-start">
@@ -264,6 +267,11 @@ a.nostyle:visited {
 
 .dropdown:hover>.dropdown-menu {
   display: block;
+  position: absolute;
+  left: auto; /* Set left to auto to reset any previous left positioning */
+  right: 0; /* Align the right edge of the menu with the button */
+  top: 50%;
+  transform: translateX(-10%);
 }
 
 .dropdown>.dropdown-toggle:active {

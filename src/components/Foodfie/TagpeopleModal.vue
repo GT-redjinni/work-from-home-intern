@@ -12,14 +12,13 @@
                 <span class="input-group-text border-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey" class="bi bi-search"
                     viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
                 </span>
                 <input type="search" class="form-control border border-dark rounded-start border-0" v-model="searchQuery" placeholder="Search People"
                     aria-label="Search" aria-describedby="search-addon" />
                 </div>
-                <button class="btn-sm btn btn-primary rounded-3 text-white m-1">Done</button>
+                <button class="btn-sm btn btn-primary rounded-3 text-white m-1" data-bs-toggle="modal" data-bs-target="#gmModal">Done</button>
             </div>
             <div class="container p-2">
               <div v-for="people in filteredPeoples" :key="people.id" class="d-flex mt-3 form-check border-bottom border-secondary-subtle">

@@ -10,7 +10,7 @@
                             </div>
                             <br>
                             <h5>Privacy policies are listed</h5>
-                                <ul>
+                                <ul style="padding:10px 30px 10px 30px">
                                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                                     <li>Sed massa justo, sodales eu elit nec, consequat convallis mi.</li>
                                     <li>In consectetur eget est ac cursus. Nullam eget suscipit purus.</li>

@@ -56,7 +56,7 @@ export default{
 @media (max-width: 767px) {
   .user-img {
     top: 10%;
-    left: 50%; /* Center the user-img on smaller screens */
+    left: 50%;
     transform: translateX(-50%);
   }
 }
@@ -67,8 +67,7 @@ export default{
 }
 .profile-desc{
     color: #727272;
-    /* opacity: 0; */
-    text-align: left;
+     text-align: left;
     padding-top: 10px;
 }
 

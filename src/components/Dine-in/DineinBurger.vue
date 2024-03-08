@@ -1,5 +1,5 @@
 <template>
-    <img src="../../assets/dinein-burger.jpg" alt="" class="rounded-3" height="175px" width="250px">
+    <img src="../../assets/dinein-burger.jpg" alt="" class="rounded-3">
 </template>
 
 <script>
@@ -9,5 +9,8 @@
 </script>
 
 <style scoped>
-
+img{
+    height: 90%;
+    width: 100%;
+}
 </style>

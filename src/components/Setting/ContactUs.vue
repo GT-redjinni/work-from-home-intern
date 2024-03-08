@@ -5,7 +5,7 @@
         </div>
                         <div class="card-body">
                         <div class="body mt-3">
-                            <form class="form-control border-0 mt-3" style="padding: 10px 50px 10px 50px;">
+                            <form class="form-control border-0 mt-3" style="padding: 10px 30px 10px 30px;">
                                 <label for="cp" class="cp">Full Name</label>
                                 <br>
                                 <div class="input-group mb-3 border-bottom border-danger">

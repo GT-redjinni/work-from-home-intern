@@ -194,6 +194,18 @@ import FaqS from './FaqS.vue'
     methods: {
         showContent(tab) {
             this.activeTab = tab;
+            this.scrollToContent(tab);
+        },
+        scrollToContent(contentId) {
+            const element = document.getElementById(contentId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest',
+                });
+            }
         },
     },
     }

@@ -19,6 +19,9 @@
 .font-400{
     font-weight: 400
 }
+.font-500{
+    font-weight: 500
+}
 .font-600{
     font-weight: 600
 }
@@ -29,10 +32,23 @@
     transition: 0.3s ease-in;
     border: none;
 }
+.confirm-btn:hover{
+    background: #EB0E19 ;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: 0.3s ease-out;
+
+}
 .decline-btn{
     background: #E8E8E8;
     color: #9A9A9A;
     border-radius: 8px;
     transition: 0.3s ease-out;
     border: none;
+}
+.decline-btn:hover{
+    background: #E8E8E8;
+    color: #9A9A9A;
+    border-radius: 8px;
+    transition: 0.3s ease-out;
 }

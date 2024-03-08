@@ -7,7 +7,7 @@
             <div class="body text-center mt-3">
                 <img src="../../assets/about-logo.jpg" alt="" height="150px" width="150px">
                 <br>
-                <p style="padding: 20px 40px 10px 40px;text-align: start;">
+                <p style="padding: 10px 30px 10px 30px;text-align: start;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa justo, sodales eu elit nec,
                     consequat convallis mi. In consectetur eget est ac cursus. Nullam eget suscipit purus. Nullam eros
                     elit, luctus at dictum non, posuere ut nulla. Aliquam volutpat sem ligula, id rhoncus nisl

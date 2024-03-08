@@ -1,14 +1,19 @@
 <template>
-  <div class="container">
-    <div class="text-start ms-2 mb-3 heading" style="font-size: 2rem;color: #585858;" data-bs-toggle="modal" data-bs-target="#filterModal">
-      Offers Near You
-      <hr class="horizontal-line" />
-      Filter
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
-        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
-      </svg>
+    <div class="text-start mt-1 mb-1 d-flex mt-auto">
+      <div class="container mt-2 mb-1">
+        <div class="heading text-start ms-1 mt-1 mb-2">
+          Offers For You
+        </div>
+      </div>
+      <span class="d-flex ms-auto" data-bs-toggle="modal" data-bs-target="#filterModal">
+          <span class="heading ms-2 me-2" role="button"> Filter </span>
+          <div class="mt-auto mb-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
+            </svg>
+          </div>
+    </span>
     </div>
-  </div>
     <div class="container bg-white">
     <div class="row mb-3">
       <div v-for="(offer, index) in offersData" :key="index" class="col-lg-4 col-md-6 col-sm-12 mt-3">
@@ -150,17 +155,12 @@ export default {
         },
         methods: {
             offerr(restro) {
-            // Set the selectedOffer based on the clicked offer
             this.selectedOffer = this.offersData.find(offer => offer.Bname === restro);
-            // Trigger the modal to be shown
             document.getElementById('offersModal').classList.add('show');
             document.getElementById('offersModal').style.display = 'block';
             document.body.classList.add('modal-open');
-            // console.log(this.selectedOffer.imgSrc);
-            // console.log(restro);
             },
             closeModal() {
-            // Close the modal
             this.selectedOffer = null;
             document.getElementById('offersModal').classList.remove('show');
             document.getElementById('offersModal').style.display = 'none';
@@ -178,18 +178,62 @@ export default {
 }
 .heading {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   position: relative;
-  column-gap: 1.5rem;
+  font-size: 2.2rem; 
+  color: #585858;
 }
 
-.horizontal-line {
-    content: "";
-    height: 2px;
-    background-color: black;
-    display: block;
-    position: relative;
-    width: 65%; 
+.heading::after {
+  content: "";
+  height: 1px;
+  background-color: black;
+  display: block;
+  position: relative;
+  width: 75%;
+}
+@media (max-width: 576px) {
+    .heading{
+      font-size: 1.3rem;
+      margin-left: 10%;
+    }
+    .heading::after {
+      content: "";
+      height: 1px;
+      background-color: black;
+      display: block;
+      position: relative;
+      width: 30%;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .heading{
+      font-size: 1.8rem;
+      margin-left: 10%;
+    }
+    .heading::after {
+      content: "";
+      height: 1px;
+      background-color: black;
+      display: block;
+      position: relative;
+      width: 48%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .heading{
+      font-size: 1.5rem;
+      margin-left: 10%;
+    }
+    .heading::after {
+      content: "";
+      height: 1px;
+      background-color: black;
+      display: block;
+      position: relative;
+      width: 70%;
+    }
 }
 </style>

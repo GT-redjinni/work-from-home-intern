@@ -1,16 +1,12 @@
 <template>
     <div class="container">
         <div class="row text-center">
-            <div class="col-12 col-md-3 mt-3"><DineinBurger/></div>
-            <div class="col-12 col-md-6 mt-3"><CreatePost/></div>
-            <div class="col-12 col-md-3 mt-3"><DineinSalad/></div>
+            <div class="col-sm-12 col-md-3 col-lg-3 mt-3"><DineinBurger/></div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-3"><CreatePost/></div>
+            <div class="col-sm-12 col-md-3 col-lg-3 mt-3"><DineinSalad/></div>
         </div>
     </div>
-
     <CategorySlider/>
-
-
-
     <div class="container">
         <OffersSection/>
     </div>

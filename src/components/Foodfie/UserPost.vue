@@ -233,6 +233,11 @@ a.nostyle:visited {
 
 .dropdown:hover>.dropdown-menu {
   display: block;
+  position: absolute;
+  left: auto; /* Set left to auto to reset any previous left positioning */
+  right: 0; /* Align the right edge of the menu with the button */
+  top: 50%;
+  transform: translateX(-10%);
 }
 
 .dropdown>.dropdown-toggle:active {
