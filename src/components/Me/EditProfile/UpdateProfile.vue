@@ -1,43 +1,46 @@
 <template>
-    <div class="card">
+    <div v-if="userDetails" class="card">
         <div class="card-header bg-white border-2">
             <div class="heading text-subheading grey-color font-600 ms-3 p-2">Update Profile</div>
         </div>
-
         <div class="card-body mb-3">
             <div class="d-flex bg-white">
                 <div class="row w-100 mt-3">
                     <span class="col-sm-12 col-md-12 col-lg-6">
                         <div class="text-center">
-                            <img src="../../../assets/user-image.jpg" alt="" height="220rem" width="220rem"
-                                class="rounded-circle" style="object-fit: cover;">
+                            <img :src="userDetails.profile_photo || defaultProfilePhoto" alt="Profile Photo" height="220rem" width="220rem"
+                                class="rounded-circle">
                             <span class="dropdown">
-                                <img src="../../../assets/input-camera.png" alt="" height="25px" width="25px"
-                                    class="rounded-circle input_camera" role="button">
+                                <img src="../../../assets/input-camera.png" alt="Change Photo" height="25px"
+                                    width="25px" class="rounded-circle input_camera" role="button">
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" @click="removePhoto()" role="button">Remove profilephoto</a></li>
-                                    <li><a class="dropdown-item" @click="changePhoto()" role="button">Change profilephoto</a></li>
+                                    <li><a class="dropdown-item" @click="removePhoto()" role="button">Remove profile
+                                            photo</a></li>
+                                    <li><a class="dropdown-item" @click="changePhoto()" role="button">Change profile
+                                            photo</a></li>
                                 </ul>
                             </span>
                         </div>
                     </span>
                     <span class="col-sm-12 col-md-12 col-lg-6">
                         <form class="form-control border-0">
-                            <label for="cp" class="cp text-desc font-600 text-start">First Name</label>
+                            <label for="firstName" class="cp text-desc font-600 text-start">First Name</label>
                             <br>
-                            <div class="input-group mb-3 border-bottom border-danger">
-                                <input type="text" class="form-control" placeholder="Rakesh" style="border: none;">
+                            <div class="input-group mb-3 border-bottom border-dark">
+                                <input type="text" class="form-control" placeholder="First Name" v-model="firstName"
+                                    style="border: none;">
                             </div>
                             <div class="input-group mb-3 border-bottom border-dark">
-                                <input type="text" class="form-control" placeholder="Prajapati" style="border: none;">
+                                <input type="text" class="form-control" placeholder="Last Name" v-model="lastName"
+                                    style="border: none;">
                             </div>
                             <div class="input-group mb-3 border-bottom border-dark">
-                                <input type="email" class="form-control" placeholder="rakeshprajapati@gmail.com"
+                                <input type="email" class="form-control" placeholder="Email" v-model="userDetails.email"
                                     style="border: none;">
                             </div>
                             <div class="input-group mb-3 border-bottom border-dark">
                                 <input type="text" class="form-control" placeholder="Mobile Number"
-                                    style="border: none;" maxlength="10">
+                                    v-model="userDetails.mobile" maxlength="10" style="border: none;">
                             </div>
                         </form>
                     </span>
@@ -45,36 +48,29 @@
             </div>
             <div>
                 <form class="form-control border-0">
-                    <label for="cp" class="cp text-desc font-600">Address</label>
+                    <label for="address" class="cp text-desc font-600">Address</label>
                     <br>
-                    <div class="input-group mb-3 border-bottom border-danger">
-                        <input type="text" class="form-control" placeholder="Address" style="border: none;">
+                    <div class="input-group mb-3 border-bottom border-dark">
+                        <input type="text" class="form-control" placeholder="Address" v-model="userDetails.address"
+                            style="border: none;">
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            <div class="input-group mb-3 border-bottom border-dark">
-                                <input type="text" class="form-control" placeholder="Select Your state"
-                                    style="border: none;">
-                                <button class="btn p-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                    </svg>
-                                </button>
+                            <div class="input-group mt-1 mb-2">
+                                <select name="b_type" id="b_type" class="rounded-3"
+                                    style="padding: 5px 5px 5px 5px;width: -webkit-fill-available;">
+                                    <option value="Select Your City">{{ sigleState || 'Select Your City'}}</option>
+                                    <!-- <option value="Gujarat">Gujarat</option> -->
+                                </select>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="input-group mb-3 border-bottom border-dark">
-                                <input type="text" class="form-control" placeholder="Select Your city"
-                                    style="border: none;">
-                                <button class="btn p-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                    </svg>
-                                </button>
+                            <div class="input-group mt-1 mb-2">
+                                <select name="b_type" id="b_type" class="rounded-3"
+                                    style="padding: 5px 5px 5px 5px;width: -webkit-fill-available;">
+                                    <option value="Select Your State">{{ sigleCity || 'Select Your City'}}</option>
+                                    <!-- <option value="Surat">Surat</option> -->
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -86,21 +82,53 @@
                         style="background-color: #F20000;">Update</button>
                 </form>
             </div>
-
         </div>
     </div>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
+
 export default {
     name: 'UpdateProfile',
+    data() {
+        return {
+            defaultProfilePhoto:require('../../../assets/user1.jpg'),
+            firstName: '',
+            lastName: ''
+        };
+    },
     methods: {
+        ...mapActions('userDetails', ['loadUserDetails']),
+        ...mapActions('getstate', ['loadSingleState']),
+        ...mapActions('getcity', ['loadSingleCity']),
         removePhoto() {
-            alert("Photo removed successfully")
+            alert("Photo removed successfully");
         },
         changePhoto() {
-            alert("Photo changed successfully")
+            alert("Photo changed successfully");
+        },
+        splitFullName() {
+            const fullName = this.userDetails.name.split(' ');
+            if (fullName.length > 1) {
+                this.firstName = fullName[0];
+                this.lastName = fullName.slice(1).join(' ');
+            } else {
+                this.firstName = fullName[0];
+                this.lastName = '';
+            }
         }
+    },
+    computed: {
+        ...mapState('userDetails', ['userDetails']),
+        ...mapState('getstate', ['sigleState']),
+        ...mapState('getcity', ['sigleCity']),
+    },
+    async created() {
+        await this.loadUserDetails();
+        await this.loadSingleState(this.userDetails.state_id);
+        await this.loadSingleCity(this.userDetails.city_id);
+        this.splitFullName();
     }
 }
 </script>
@@ -114,14 +142,13 @@ input:focus {
 .dropdown:hover>.dropdown-menu {
     display: block;
     position: absolute;
-    left: auto; /* Set left to auto to reset any previous left positioning */
-    right: 0; /* Align the right edge of the menu with the button */
+    left: auto;
+    right: 0;
     top: 420%;
-    transform: translateX(-22%); /* Move the menu to the left */
+    transform: translateX(-22%);
 }
 
 .dropdown>.dropdown-toggle:active {
-    /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
 
@@ -144,7 +171,7 @@ input:focus {
     }
 }
 
-@media (min-width: 768px)and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
     .input_camera {
         margin-left: -12%;
         margin-top: 40%;

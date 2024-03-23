@@ -26,7 +26,7 @@
                                 <input type="number" class="form-control" style="border: none;">
                             </div>
                             <br>
-                            <Button class="confirm-btn w-100 p-2 mt-0 text-center" data-bs-toggle="modal" data-bs-target="#bookingConfirmModal">Book Table</Button>
+                            <button class="confirm-btn w-100 p-2 mt-0 text-center" data-bs-toggle="modal" data-bs-target="#bookingConfirmModal">Book Table</button>
                         </div>
                         <div class="text-center">
                         </div>

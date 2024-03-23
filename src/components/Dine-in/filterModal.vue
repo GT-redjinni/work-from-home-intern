@@ -20,7 +20,7 @@
           </div>
           <div class="container p-1">
             <div v-for="city in filteredCities" :key="city.id" class="form-check border-bottom border-light-subtle mt-2">
-              <input class="form-check-input custom-checkbox" type="checkbox" v-model="isChecked">
+              <input class="form-check-input custom-checkbox" type="checkbox" v-model="city.isChecked">
               <label class="form-check-label text-subheading font-600 grey-color ms-2 mb-2" for="flexCheckDefault">{{
                 city.cityName }}</label>
             </div>

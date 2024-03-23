@@ -31,7 +31,7 @@
                     </div>
                     </div>
                     <div class="ms-auto mt-2">
-                        <input class="form-check-input custom-checkbox" type="checkbox" v-model="isChecked">  
+                        <input class="form-check-input custom-checkbox" type="checkbox" v-model="people.isChecked">  
                     </div>
                 </div>
             </div>

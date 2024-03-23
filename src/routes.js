@@ -7,7 +7,7 @@ import MeComponent from './components/Me/MeComponent.vue';
 import EditProfile from './components/Me/EditProfile/EditProfile.vue';
 import SinglePost from './components/Foodfie/SinglePost.vue';
 import LogIn from './components/LogIn.vue'; 
-
+import LikesModal from "./components/Foodfie/LikesModal.vue";
 const routes= [
     {
         name:'Foodfie',
@@ -45,6 +45,12 @@ const routes= [
         component: SinglePost,
         props: route => ({ postId: parseInt(route.params.postId) }),
     },
+    {
+        name: 'LikesModal',
+        path: '/likes/:postId',
+        component: LikesModal,
+        props: route => ({ postId: parseInt(route.params.postId) }),
+      },
     {
         name:'LogIn',
         path:'/login',

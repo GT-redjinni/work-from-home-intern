@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <Button class="confirm-btn w-100 b-0 text-center">WITHDRAW</Button>
+                    <button class="confirm-btn w-100 b-0 text-center">WITHDRAW</button>
                 </div>
             </div>
         </div>

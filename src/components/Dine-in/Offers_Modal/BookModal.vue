@@ -26,8 +26,8 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                            <Button class="decline-btn w-50 p-1 ps-1 pt-1 pe-1 text-center" data-bs-dismiss="modal" aria-label="Close" style="border: none;">Cancel</Button>
-                            <Button class="confirm-btn w-50 p-1 ps-1 pt-1 pe-1 text-center" data-bs-toggle="modal" data-bs-target="#postModal" style="border: none;">Post</Button>
+                            <button class="decline-btn w-50 p-1 ps-1 pt-1 pe-1 text-center" data-bs-dismiss="modal" aria-label="Close" style="border: none;">Cancel</button>
+                            <button class="confirm-btn w-50 p-1 ps-1 pt-1 pe-1 text-center" data-bs-toggle="modal" data-bs-target="#postModal" style="border: none;">Post</button>
                         </div>
                 </div>
                 </div>

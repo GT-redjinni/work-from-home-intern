@@ -8,7 +8,7 @@
                                 <img src="../../../assets/thankyou-img.png" alt="" height="200px" width="240px">
                             </div>
                         <div class="p-5">
-                            <Button class="confirm-btn w-100 p-2 mt-2 text-center" data-bs-dismiss="modal" aria-label="Close">GO TO HOME PAGE</Button>
+                            <button class="confirm-btn w-100 p-2 mt-2 text-center" data-bs-dismiss="modal" aria-label="Close">GO TO HOME PAGE</button>
                         </div>
                     </div>
                   </div>
@@ -23,6 +23,6 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

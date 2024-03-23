@@ -26,13 +26,33 @@ export default{
       }
   },
   methods: {
-    ...mapActions(['handleLogin']),
-    onSubmit(){
-      this.handleLogin({
-        email:this.user.email,
-        password:this.user.password
-      })
-      this.$router.push('/foodfie');
+    ...mapActions('login',['handleLogin']),
+    onSubmit() {
+      if (this.user.email.length === 0 || this.user.password.length === 0) {
+        alert("Please fill in all the details");
+      } else {
+        this.handleLogin({
+          email: this.user.email,
+          password: this.user.password
+        }).then((response) => {
+          if (response.data && response.data.message) {
+            // Show the message received from the server in the alert
+            alert(response.data.message);
+          } else {
+            // Assuming response.data.success indicates successful login
+            if (response.data.success) {
+              // Redirect only when login is successful
+              this.$router.push('/foodfie');
+            }
+          }
+        }).catch((error) => {
+          console.error("Login failed:", error);
+          // Check if the error is due to 422 status code (Unprocessable Content)
+          if (error.response && error.response.status === 422) {
+            alert("Incorrect Email or Password");
+          }
+        });
+      }
     },
   },
   mounted(){

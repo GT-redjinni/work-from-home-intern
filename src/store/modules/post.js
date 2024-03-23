@@ -24,24 +24,51 @@ const actions = {
           tag: 'check_tag',
         },
       });
-      // console.log(response.data.data);
-      const userPosts = response.data.data.map(post => ({
-        id: post.id,
-        userName: post.user.name,
-        userImage: post.user.profile_photo,
-        time: formatTime(post.created_at),
-        location: post.city.name || 'Unknown',
-        content: post.description,
-        postImage: post.images.map(image => image.image),
-        url:post.url,
-        likes: post.likes_count,
-        likesData:post.likes,
-        comments: post.comments_count,
-        shares: post.shares_count,
-        showLikes: true,
-        showShare: false,
-      }));
+  
+      const userPosts = await Promise.all(response.data.data.map(async post => {
+        const commentsResponse = await axios.post(`customers/posts/comments`, {
+          post_id: post.id,
+        }, {
+          headers: {
+            DeviceID: "11111",
+            versionName: "1.0.0",
+            DeviceType: "0",
+            Authorization: `Bearer ${authToken}`,
+          },
+        });
+  
+        const firstComment = commentsResponse.data.data.comments[0];
+        
+        let firstCommentData = {};
+        if (firstComment) {
+          firstCommentData = {
+            userName: firstComment.user ? firstComment.user.name : '',
+            userDesignation: firstComment.user ? firstComment.user.designation : '',
+            userComment: firstComment.comment,
+            userProfilePhoto: firstComment.user ? firstComment.user.profile_photo : ''
+          };
+        }
 
+        
+        return {
+          id: post.id,
+          userName: post.user.name,
+          userImage: post.user.profile_photo,
+          time: formatTime(post.created_at),
+          location: post.city.name || 'Unknown',
+          content: post.description,
+          postImage: post.images.map(image => image.image),
+          url: post.url,
+          likes: post.likes_count,
+          likesData: post.likes,
+          comments: post.comments_count,
+          shares: post.shares_count,
+          showLikes: true,
+          showShare: false,
+          firstComment: firstCommentData
+        };
+      }));
+  
       commit('SET_USER_POSTS', userPosts);
     } catch (error) {
       console.error(error);

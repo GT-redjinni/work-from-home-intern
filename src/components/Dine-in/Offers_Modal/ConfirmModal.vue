@@ -27,7 +27,7 @@
                                 <div class="col-6 p-1 text-end text-subheading font-400 grey-color">12:30 PM</div>
                             </div>
                             <br>
-                            <Button class="confirm-btn w-100 p-2 mt-2 text-center" data-bs-toggle="modal" data-bs-target="#thankyouModal">Book Table</Button>
+                            <button class="confirm-btn w-100 p-2 mt-2 text-center" data-bs-toggle="modal" data-bs-target="#thankyouModal">Book Table</button>
                         </div>
                     </div>
                   </div>

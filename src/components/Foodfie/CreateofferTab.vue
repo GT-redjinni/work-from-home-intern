@@ -1,6 +1,6 @@
 <template>
     <div class="mt-2">
-            <form class="form-control border-0" style="padding: 10px 50px 10px 50px;">
+            <form class="form-control border-0" style="padding: 10px 20px 10px 20px;">
                     <p class="text-start mb-1">Offer Title</p>
                     <div class="input-group mb-3 border-bottom border-danger">
                         <input type="text" class="form-control" placeholder="Offer Title" style="border: none;">

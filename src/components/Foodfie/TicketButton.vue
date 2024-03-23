@@ -3,13 +3,15 @@
 </template>
 
 <script>
-    export default {
-        name:'TicketButton'
-    }
+
+export default {
+    name: 'TicketButton',
+    
+}
 </script>
 
 <style scoped>
-.ticket-btn{
+.ticket-btn {
     background: #f20000;
     border: 0.5px solid #959595;
     color: #FFFFFF;
